@@ -31,7 +31,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="max-w-[1300px] flex items-center justify-center mx-auto my-5">
+        <div className="max-w-[1400px] flex items-center justify-center mx-auto my-5">
           <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
             {info.map((item) => {
               return (
