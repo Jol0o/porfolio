@@ -25,12 +25,11 @@ const Projects = () => {
           <h1 className="text-3xl md:text-5xl font-bold text-green-500  pb-2">
             Selected Projects
           </h1>
-          <p className="fonr-medium text-xs md:text-sm mt-2 text-gray-500">
+          <p className="fonr-medium text-center text-xs md:text-sm mt-2 text-gray-500">
             Here are a few of the projects I have worked on and am proud to
             showcase:
           </p>
         </div>
-
         <div className="max-w-[1400px] flex items-center justify-center mx-auto my-5">
           <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
             {info.map((item) => {
