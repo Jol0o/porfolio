@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div
-      className="snap-start text-white w-full min-h-[65vh] flex justify-center items-center flex-col font-mono"
+      className="snap-start text-white w-full min-h-[65vh] flex justify-center items-center flex-col font-mono mb-[3%]"
       id="about"
     >
       <div className="max-w-[1200px] mx-auto">
@@ -15,10 +15,10 @@ const About = () => {
               className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[400px] w-auto sm:w-[400px]"
             />
           </div>
-          <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col  py-[2%]">
-            <h1 className="text-green-300 text-[30px] font-semibold mb-3">
+          <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[1%] py-[2%]">
+            <h1 className="text-green-300 text-xl sm:text-[30px] font-semibold mb-3">
               My name is
-              <span className="text-[50px] bg-green-900 text-white p-3 rounded-lg">
+              <span className="text-3xl sm:text-[50px] bg-green-900 text-white p-3 rounded-lg">
                 John Loyd
               </span>
             </h1>
