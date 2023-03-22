@@ -12,11 +12,11 @@ export default function Skills() {
     "/Skill/Vector.png",
   ];
   return (
-    <div className="w-full min-h-[30vh] flex flex-col items-center justify-center">
+    <div className="w-full min-h-[30vh] flex flex-col items-center justify-center mt-[3%]">
       <div className="text-green-400 font-bold bg-green-900 w-fit rounded-lg px-2">
         🧑‍💻 Skill & Experience
       </div>
-      <div className="flex items-center flex-col">
+      <div className="flex items-center justify-center flex-col">
         <h1 className="my-4 font-bold text-[40px] text-white">
           Technologies and skills
         </h1>
