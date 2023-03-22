@@ -2,9 +2,11 @@ import React from "react";
 
 export default function Timeline() {
   return (
-    <section class="flex min-h-screen justify-center pt-20">
+    <section class="flex min-h-screen items-center justify-center pt-20">
       <div class="w-80">
-        <h2 class="text-xl text-gray-700 mb-7">Learning Timeline</h2>
+        <h2 class="text-[30px] font-semibold text-gray-300 mb-7">
+          Learning Timeline
+        </h2>
         <ul>
           <li class="relative flex items-baseline gap-6 pb-5">
             <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
