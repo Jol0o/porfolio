@@ -8,14 +8,14 @@ const About = () => {
     >
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row justify-evenly items-center w-fit  mx-auto  rounded-xl">
-          <div className="w-full md:w-1/2 before:bg-white before:absolute before:content-none">
+          <div className="w-full flex justify-center items-center sm:w-1/2 before:bg-white before:absolute before:content-none">
             <img
               src="/me1.png"
               alt="me"
               className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[400px] w-auto sm:w-[400px]"
             />
           </div>
-          <div className="w-full md:w-1/2 h-fit flex flex-col  py-[2%]">
+          <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col  py-[2%]">
             <h1 className="text-green-300 text-[30px] font-semibold mb-3">
               My name is
               <span className="text-[50px] bg-green-900 text-white p-3 rounded-lg">
