@@ -51,6 +51,7 @@ export default function Contact() {
           ></iframe>
         </div>
         <form
+          ref={form}
           id="contact-form"
           onSubmit={sendEmail}
           className="md:h-full min-h-fit flex flex-col justify-center w-full md:w-3/4"
