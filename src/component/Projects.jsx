@@ -31,8 +31,8 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="max-w-[1200px] flex items-center justify-center mx-auto my-5">
-          <div className="w-full min-h-full flex items-center justify-center gap-10">
+        <div className="max-w-[1300px] flex items-center justify-center mx-auto my-5">
+          <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
             {info.map((item) => {
               return (
                 <div className="w-[500px] active:bg-green-900 border border-green-800 rounded-lg p-3">
