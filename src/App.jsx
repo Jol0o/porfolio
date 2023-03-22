@@ -10,7 +10,7 @@ import Timeline from "./component/Timeline";
 
 const App = () => {
   return (
-    <div className="bg-[#090E16] snap-x">
+    <div className="bg-[#090E16] w-full snap-x">
       <Nav />
       <Hero />
       <Projects />
