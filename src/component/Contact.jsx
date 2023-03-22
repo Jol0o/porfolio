@@ -1,13 +1,11 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { AiTwotoneMail } from "react-icons/ai";
 
 export default function Contact() {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_1gtuhsb",
@@ -89,11 +87,9 @@ export default function Contact() {
             className="min-h-[200px] py-2 px-5 text-white font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
             required
           />
-          <input
-            type="submit"
-            value="Send"
-            className="self-start h-10 w-28 bg-green-500 rounded-full shadow-md mt-3 shadow-green-500 font-bold text-lg"
-          />
+          <button className="self-start h-10 w-28 bg-green-500 rounded-full shadow-md mt-3 shadow-green-500 font-bold text-lg">
+            Send
+          </button>
         </form>
       </div>
     </div>

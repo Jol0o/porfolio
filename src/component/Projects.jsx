@@ -21,7 +21,7 @@ const Projects = () => {
       id="project"
     >
       <div className="flex flex-col">
-        <div className="flex flex-col mx-[2%]">
+        <div className="flex flex-col items-center justify-center mx-[2%]">
           <h1 className="text-3xl md:text-5xl font-bold text-green-500  pb-2">
             Selected Projects
           </h1>
