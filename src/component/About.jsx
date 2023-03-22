@@ -12,15 +12,12 @@ const About = () => {
             <img
               src="/me1.png"
               alt="me"
-              className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[400px] w-auto sm:w-[400px]"
+              className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[300px] sm:h-[400px] w-auto sm:w-[400px]"
             />
           </div>
-          <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[1%] py-[2%]">
+          <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[3%] py-[2%]">
             <h1 className="text-green-300 text-xl sm:text-[30px] font-semibold mb-3">
-              My name is
-              <span className="text-3xl sm:text-[50px] bg-green-900 text-white p-3 rounded-lg">
-                John Loyd
-              </span>
+              My name is John Loyd
             </h1>
             <div className="flex flex-col gap-3">
               <p className="w-auto  tracking-wide md:text-sm text-xs leading-10 ">
@@ -30,7 +27,7 @@ const About = () => {
               <p>
                 🚀 I'm skilled in HTML , CSS , BOOTSTAP , TAILWIND , REACT.JS ,
                 NEXT.JS , FIREBASE , and I'm always eager to learn more. Besides
-                coding, I enjoy coding and designing.
+                coding, I enjoy video games and designing.
               </p>
               <p>
                 💡 I value collaboration and teamwork and am open to working
