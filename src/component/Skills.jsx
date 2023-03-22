@@ -17,7 +17,7 @@ export default function Skills() {
         🧑‍💻 Skill & Experience
       </div>
       <div className="flex items-center justify-center flex-col">
-        <h1 className="my-4 font-bold text-[40px] text-white">
+        <h1 className="my-4 font-bold text-center text-[40px] text-white">
           Technologies and skills
         </h1>
         <p className="mb-4 text-gray-500 text-sm">
