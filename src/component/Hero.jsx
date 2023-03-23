@@ -28,8 +28,8 @@ const Hero = () => {
         </li>
       </ul>
       <div className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col ">
-        <div className="absolute top-[23%] flex justify-center items-center">
-          <h2 className="text-center font-bold font-mono text-[48px] whitespace-nowrap sm:text-[90px] md:text-[110px] lg:text-[140px] xl:text-[190px] uppercase">
+        <div className="absolute w-auto top-[23%] flex justify-center items-center">
+          <h2 className="text-center font-bold font-mono text-[45px] whitespace-nowrap sm:text-[90px] md:text-[110px] lg:text-[140px] xl:text-[190px] uppercase">
             Web Developer.
           </h2>
         </div>
