@@ -23,7 +23,7 @@ export default function Skills() {
         <p className="mb-4 text-gray-500 text-sm">
           Techs I use on a daily basis.
         </p>
-        <div className="flex gap-10 px-[3%] flex-wrap">
+        <div className="flex gap-10 justify-center items-center px-[3%] flex-wrap">
           {skills.map((img) => {
             return (
               <img
