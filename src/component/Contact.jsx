@@ -28,7 +28,7 @@ export default function Contact() {
       id="contact"
       className="w-full min-h-screen flex justify-center items-center "
     >
-      <div className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-10">
+      <div className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-0 sm:p-10">
         <div className="md:h-full md:w-full flex flex-col  w-full">
           <h1 className="text-3xl md:text-5xl font-bold text-green-500 mb-2">
             Get in touch

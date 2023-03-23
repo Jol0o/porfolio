@@ -11,7 +11,7 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <ul className="flex gap-8 font-thin text-sm">
+          <ul className="flex flex-wrap gap-8 font-thin text-sm">
             <li className="hover:border-2 hover:border-green-500 h-10 w-16 rounded-full flex items-center justify-center transition">
               Home
             </li>
