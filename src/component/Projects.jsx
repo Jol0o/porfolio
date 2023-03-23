@@ -34,7 +34,7 @@ const Projects = () => {
           <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
             {info.map((item) => {
               return (
-                <div className="w-[270px] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
+                <div className="w-[270px  ] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
                   <img
                     src={item.img}
                     alt="image"
