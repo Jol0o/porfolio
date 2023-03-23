@@ -8,7 +8,7 @@ const Nav = () => {
   };
   return (
     <div className="w-full fixed z-10">
-      <div className=" flex justify-between md:justify-center items-center  h-14 text-[#9C9C9C] md:max-w-7xl mx-auto px-[2%] bg-[#1B1B1B] rounded-b-lg relative ">
+      <div className=" flex justify-between md:justify-center items-center  h-14 text-[#9C9C9C] w-auto md:max-w-7xl mx-auto px-[2%] bg-[#1B1B1B] rounded-b-lg relative ">
         <div className="flex md:hidden font-semibold text-2xl ">
           <h1>JOLO.</h1>
         </div>
