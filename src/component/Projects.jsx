@@ -83,7 +83,7 @@ const Projects = () => {
                   <div className="w-[270px  ] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
                     {isInView && (
                       <motion.img
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0, rotate: [0, 10, 0] }}
                         transition={{
                           duration: 0.7,
