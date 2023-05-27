@@ -40,7 +40,7 @@ const Projects = () => {
   ];
   return (
     <div
-      className="min-h-[50vh] snap-start w-full text-white flex justify-center items-center my-16"
+      className="min-h-[60vh] snap-start w-full text-white flex justify-center items-center my-16"
       id="project"
     >
       <div className="flex flex-col">

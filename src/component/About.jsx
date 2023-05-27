@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div
-      className="snap-start text-white w-full min-h-[65vh] flex justify-center items-center flex-col font-mono mb-[3%]"
+      className="snap-start text-white w-full min-h-[70vh] flex justify-center items-center flex-col font-mono mb-[3%]"
       id="about"
     >
       <div className="max-w-[1200px] mx-auto">
