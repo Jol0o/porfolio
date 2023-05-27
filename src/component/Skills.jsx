@@ -13,7 +13,7 @@ export default function Skills() {
     "/Skill/Vector.png",
   ];
   return (
-    <div className="w-full min-h-[30vh] flex flex-col items-center justify-center mt-[3%]">
+    <div className="w-full min-h-[50vh] flex flex-col items-center justify-center mt-[3%]">
       <motion.div
         transition={{
           delay: 0.5,
