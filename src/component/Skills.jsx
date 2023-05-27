@@ -1,6 +1,54 @@
 import { motion } from "framer-motion";
 import React from "react";
 
+const topVariants = {
+  offscreen: {
+    opacity: 0,
+    y: -100,
+    scale: 0.5,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      delay: 0.4,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
+
+const bottomVariants = {
+  offscreen: {
+    opacity: 0,
+    scale: 0.5,
+    y: 100,
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: 0.4,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
+
 export default function Skills() {
   const skills = [
     "/Skill/Github.png",
@@ -13,16 +61,15 @@ export default function Skills() {
     "/Skill/Vector.png",
   ];
   return (
-    <div className="w-full min-h-[50vh] flex flex-col items-center justify-center mt-[3%]">
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      transition={{ staggerChildren: 0.5 }}
+      className="w-full min-h-[50vh] flex flex-col items-center justify-center mt-[3%]"
+    >
       <motion.div
-        transition={{
-          delay: 0.5,
-          duration: 0.8,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0 }}
+        variants={topVariants}
         className="text-green-400 font-bold bg-green-900 w-fit rounded-lg px-2"
       >
         🧑‍💻 Skill & Experience
@@ -37,7 +84,8 @@ export default function Skills() {
         <div className="flex gap-10 justify-center items-center px-[3%] flex-wrap">
           {skills.map((img) => {
             return (
-              <img
+              <motion.img
+                variants={bottomVariants}
                 src={img}
                 alt="img"
                 className="h-10  hover:scale-125 transition "
@@ -46,6 +94,6 @@ export default function Skills() {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
