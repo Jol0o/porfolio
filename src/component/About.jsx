@@ -16,8 +16,8 @@ const About = () => {
                 duration: 0.8,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
               src="/me1.png"
               alt="me"
