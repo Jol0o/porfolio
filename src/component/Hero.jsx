@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import React, { useState } from "react";
+import { useRef } from "react";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
