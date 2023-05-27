@@ -54,20 +54,16 @@ const Projects = () => {
           {isInView && (
             <motion.h1
               key="project"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.5, y: -50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{
                 duration: 0.7,
                 delay: 0.5,
-                ease: [0, 0.71, 0.2, 1.01],
-                scale: {
-                  type: "spring",
-                  damping: 3,
-                  stiffness: 100,
-                  restDelta: 0.001,
-                },
+                type: "spring",
+                damping: 8,
+                stiffness: 100,
               }}
-              className="text-3xl md:text-5xl font-bold text-green-500  pb-2"
+              className="text-3xl md:text-5xl font-bold text-green-500 pb-2"
             >
               Selected Projects
             </motion.h1>
