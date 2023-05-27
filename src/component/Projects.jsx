@@ -32,8 +32,8 @@ const textVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.4,
-      duration: 0.9,
+      delay: 0.3,
+      duration: 0.7,
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
