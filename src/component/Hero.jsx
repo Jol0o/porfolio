@@ -47,7 +47,11 @@ const Hero = () => {
       <div className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col ">
         <div className="absolute w-auto top-[23%] flex justify-center items-center">
           <motion.h2
-            transition={{ delay: 0.7 }}
+            transition={{
+              delay: 0.5,
+              duration: 0.8,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
