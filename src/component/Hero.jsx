@@ -61,7 +61,15 @@ const Hero = () => {
           </motion.h2>
         </div>
         <div className="absolute md:top-[23%]">
-          <img
+          <motion.img
+            transition={{
+              delay: 0.5,
+              duration: 0.8,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
             src="./avatar.png"
             alt="avatar"
             className=" rounded-full bg-gradient-to-b from-[#13a049a9] to-[#45d8d85e] shadow-lg  shadow-[#13a04968] h-80 w-80 md:w-[400px] md:h-[400px] "
