@@ -1,5 +1,20 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import React, { useRef } from "react";
+
+const cardVariants = {
+  offscreen: {
+    y: 300,
+  },
+  onscreen: {
+    y: 50,
+    rotate: -10,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 const Projects = () => {
   const info = [
@@ -39,9 +54,6 @@ const Projects = () => {
       tool: ["HTML ", "REACT.JS"],
     },
   ];
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   return (
     <div
