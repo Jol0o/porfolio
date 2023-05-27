@@ -75,12 +75,15 @@ export default function Skills() {
         🧑‍💻 Skill & Experience
       </motion.div>
       <div className="flex items-center justify-center flex-col">
-        <h1 className="my-4 font-bold text-center text-[40px] text-white">
+        <motion.h1
+          variants={topVariants}
+          className="my-4 font-bold text-center text-[40px] text-white"
+        >
           Technologies and skills
-        </h1>
-        <p className="mb-4 text-gray-500 text-sm">
+        </motion.h1>
+        <motion.p variants={topVariants} className="mb-4 text-gray-500 text-sm">
           Techs I use on a daily basis.
-        </p>
+        </motion.p>
         <div className="flex gap-10 justify-center items-center px-[3%] flex-wrap">
           {skills.map((img) => {
             return (
