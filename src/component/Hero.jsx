@@ -74,16 +74,46 @@ const Hero = () => {
           )}
         </div>
         <div className="absolute md:top-[23%]">
-          <motion.img
-            src="./avatar.png"
-            alt="avatar"
-            className=" rounded-full bg-gradient-to-b from-[#13a049a9] to-[#45d8d85e] shadow-lg  shadow-[#13a04968] h-80 w-80 md:w-[400px] md:h-[400px] "
-          />
-          <motion.div className="flex items-center cursor-auto justify-center mt-10">
-            <button className="text-green-500 text-xl">
-              Let's get Started.
-            </button>
-          </motion.div>
+          {isInView && (
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              src="./avatar.png"
+              alt="avatar"
+              className=" rounded-full bg-gradient-to-b from-[#13a049a9] to-[#45d8d85e] shadow-lg  shadow-[#13a04968] h-80 w-80 md:w-[400px] md:h-[400px] "
+            />
+          )}
+          {isInView && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              className="flex items-center cursor-auto justify-center mt-10"
+            >
+              <button className="text-green-500 text-xl">
+                Let's get Started.
+              </button>
+            </motion.div>
+          )}
         </div>
       </div>
 
