@@ -1,23 +1,66 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const imgVariants = {
+  offscreen: {
+    opacity: 0,
+    x: -100,
+  },
+  onscreen: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.8,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
+
+const textVariants = {
+  offscreen: {
+    opacity: 0,
+    x: 100,
+  },
+  onscreen: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.8,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
+
 const About = () => {
   return (
     <div
       className="snap-start text-white w-full min-h-[70vh] flex justify-center items-center flex-col font-mono mb-[3%]"
       id="about"
     >
-      <div className="max-w-[1200px] mx-auto">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ staggerChildren: 0.5 }}
+        className="max-w-[1200px] mx-auto"
+      >
         <div className="flex flex-col md:flex-row justify-evenly items-center w-fit  mx-auto  rounded-xl">
           <motion.div
-            transition={{
-              delay: 0.5,
-              duration: 0.8,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -10 }}
+            variants={imgVariants}
             className="w-full flex justify-center items-center sm:w-1/2 before:bg-white before:absolute before:content-none"
           >
             <img
@@ -27,18 +70,11 @@ const About = () => {
             />
           </motion.div>
 
-          <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[3%] py-[2%]">
-            <motion.div
-              transition={{
-                delay: 0.5,
-                duration: 0.8,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="flex flex-col gap-3"
-            >
+          <motion.div
+            variants={textVariants}
+            className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[3%] py-[2%]"
+          >
+            <div className="flex flex-col gap-3">
               <p className="w-auto  tracking-wide md:text-sm leading-10 ">
                 👋 Hi, I'm John Loyd, a self-taught web developer from
                 Philippines.
@@ -53,7 +89,7 @@ const About = () => {
                 together. If you have any questions or would like to work with
                 me, please reach out.
               </p>
-            </motion.div>
+            </div>
 
             <button className="border border-green-500 text-green-500 bg-transparent h-10 w-36 relative rounded-md mt-5">
               <div className="absolute bottom-8 left-[135px]">
@@ -66,9 +102,9 @@ const About = () => {
                 Download CV
               </a>
             </button>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
