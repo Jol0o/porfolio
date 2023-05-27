@@ -42,12 +42,6 @@ export default function Contact() {
             to get back to you within the next 48 hours. Let's work together to
             bring your vision to life!
           </p>
-          <iframe
-            className="rounded-lg w-auto md:w-3/4 mt-2"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.787571487015!2d120.91651351518445!3d14.323768389979184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d52235528ef9%3A0x9c218ab8a5f7fdc7!2sSavannah%20Fields%20by%20Filinvest!5e0!3m2!1sen!2sph!4v1677986858090!5m2!1sen!2sph"
-            height="300"
-            loading="lazy"
-          ></iframe>
         </div>
         <form
           ref={form}

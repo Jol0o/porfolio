@@ -2,12 +2,35 @@ import React from "react";
 
 const Projects = () => {
   const info = [
-    { name: "Food", img: "./project/Food.jpeg", tool: ["HTML", "CSS"] },
-    { name: "K's", img: "./project/k.jpeg", tool: ["HTML ", " JS"] },
     {
-      name: "Netflix.clone",
+      name: "Food",
+      img: "./project/Food.jpeg",
+      tool: ["HTML", "CSS"],
+      link: "https://food-hubs.netlify.app",
+    },
+    {
+      name: "Todo",
+      img: "./project/todo.png",
+      tool: ["FIREBASE", "REACT"],
+      link: "https://nexttodoapp.netlify.app/",
+    },
+    {
+      name: "K's",
+      img: "./project/k.jpeg",
+      tool: ["HTML ", " JS"],
+      link: "https://food-hubs.netlify.app",
+    },
+    {
+      name: "KFC",
+      img: "./project/kfc.png",
+      tool: ["HTML", "REACTJS"],
+      link: "https://kfc-cloner.netlify.app/",
+    },
+    {
+      name: "NetMovies.clone",
       img: "./project/netflix.jpeg",
       tool: ["TAILWIND ", " REACT.js"],
+      link: "https://netmov.netlify.app",
     },
     {
       name: "Spotify.clone",
@@ -34,27 +57,29 @@ const Projects = () => {
           <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
             {info.map((item) => {
               return (
-                <div className="w-[270px  ] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
-                  <img
-                    src={item.img}
-                    alt="image"
-                    className="w-full min-h-fit rounded-xl hover:scale-[1.02] transition"
-                  />
-                  <div className="flex justify-between items-center mt-2">
-                    <div>
-                      <h1 className="font-semibold text-sm">{item.name}</h1>
-                    </div>
-                    <div className="flex gap-2">
-                      {item.tool.map((tool) => {
-                        return (
-                          <h1 className="text-[10px] font-semibold bg-green-800 rounded-lg p-1">
-                            {tool}
-                          </h1>
-                        );
-                      })}
+                <a href={item.link}>
+                  <div className="w-[270px  ] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
+                    <img
+                      src={item.img}
+                      alt="image"
+                      className="w-full min-h-fit rounded-xl hover:scale-[1.02] transition"
+                    />
+                    <div className="flex justify-between items-center mt-2">
+                      <div>
+                        <h1 className="font-semibold text-sm">{item.name}</h1>
+                      </div>
+                      <div className="flex gap-2">
+                        {item.tool.map((tool) => {
+                          return (
+                            <h1 className="text-[10px] font-semibold bg-green-800 rounded-lg p-1">
+                              {tool}
+                            </h1>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               );
             })}
           </div>
