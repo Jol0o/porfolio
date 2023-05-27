@@ -1,4 +1,51 @@
+import { motion } from "framer-motion";
 import React from "react";
+
+const headVariants = {
+  offscreen: {
+    opacity: 0,
+    scale: 0.5,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.3,
+      duration: 0.7,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
+
+const timelineVariants = {
+  offscreen: {
+    opacity: 0,
+    scale: 0.5,
+    x: 100,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
 
 export default function Timeline() {
   return (
@@ -6,10 +53,19 @@ export default function Timeline() {
       id="timeline"
       class="flex min-h-screen items-center justify-center pt-20"
     >
-      <div class="w-auto container md:w-80">
-        <h2 class="text-[30px] font-semibold text-gray-300 mb-7">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ staggerChildren: 0.5 }}
+        class="w-auto container md:w-80"
+      >
+        <motion.h2
+          variants={headVariants}
+          class="text-[30px] font-semibold text-gray-300 mb-7"
+        >
           Learning Timeline
-        </h2>
+        </motion.h2>
         <ul>
           <li class="relative flex items-baseline gap-6 pb-5">
             <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
@@ -23,14 +79,14 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <div>
+            <motion.div variants={timelineVariants}>
               <h1 className="font-semibold text-md text-white">HTML & CSS</h1>
               <p class="text-sm text-gray-400">12-8-2022</p>
               <p class="mt-2 text-gray-400 text-sm">
                 HTML and CSS basics: Start by learning the fundamentals of HTML
                 and CSS, including syntax, semantics, and page structure.
               </p>
-            </div>
+            </motion.div>
           </li>
           <li class="relative flex items-baseline gap-6 pb-5">
             <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
@@ -44,7 +100,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <div>
+            <motion.div variants={timelineVariants}>
               <h1 className="font-semibold text-md text-white">
                 Responsive Design
               </h1>
@@ -53,7 +109,7 @@ export default function Timeline() {
                 Learn how to create responsive layouts that adapt to different
                 screen sizes, using tools such as media queries and flexbox.
               </p>
-            </div>
+            </motion.div>
           </li>
           <li class="relative flex items-baseline gap-6 pb-5">
             <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
@@ -67,7 +123,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <div>
+            <motion.div variants={timelineVariants}>
               <h1 className="font-semibold text-md text-white">
                 JavaScript fundamentals
               </h1>
@@ -76,7 +132,7 @@ export default function Timeline() {
                 Get familiar with the basics of JavaScript, including variables,
                 data types, functions, and control structures.
               </p>
-            </div>
+            </motion.div>
           </li>
           <li class="relative flex items-baseline gap-6 pb-5">
             <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
@@ -90,7 +146,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <div>
+            <motion.div variants={timelineVariants}>
               <h1 className="font-semibold text-md text-white">
                 DOM manipulation
               </h1>
@@ -99,7 +155,7 @@ export default function Timeline() {
                 Learn how to manipulate the Document Object Model (DOM) using
                 JavaScript to create interactive web pages.
               </p>
-            </div>
+            </motion.div>
           </li>
           <li class="relative flex items-baseline gap-6 pb-5">
             <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
@@ -113,7 +169,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <div>
+            <motion.div variants={timelineVariants}>
               <h1 className="font-semibold text-md text-white">
                 JavaScript frameworks and libraries
               </h1>
@@ -124,7 +180,7 @@ export default function Timeline() {
                 frameworks and libraries can help me create complex web
                 applications more easily and efficiently.
               </p>
-            </div>
+            </motion.div>
           </li>
           <li class="relative flex items-baseline gap-6 pb-5">
             <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
@@ -138,7 +194,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <div>
+            <motion.div variants={timelineVariants}>
               <h1 className="font-semibold text-md text-white">NextJs</h1>
               <p class="text-sm text-gray-400">9-2-2023</p>
               <p class="mt-2 text-gray-400 text-sm">
@@ -149,7 +205,7 @@ export default function Timeline() {
                 provides many features out of the box, such as automatic code
                 splitting, optimized performance, and SEO-friendly rendering.
               </p>
-            </div>
+            </motion.div>
           </li>
           <li class="relative flex items-baseline gap-6 pb-5">
             <div>
@@ -163,7 +219,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <div>
+            <motion.div variants={timelineVariants}>
               <h1 className="font-semibold text-md text-white">Tailwind CSS</h1>
               <p class="text-sm text-gray-400">15-2-2023</p>
               <p class="mt-2 text-gray-400 text-sm">
@@ -177,10 +233,10 @@ export default function Timeline() {
                 focus on building functionality and let the framework handle the
                 styling, resulting in faster and more efficient development.
               </p>
-            </div>
+            </motion.div>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 }
