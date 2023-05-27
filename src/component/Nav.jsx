@@ -33,7 +33,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="timeline" className="hover:text-[#3F8E00]">
+            <a href="#timeline" className="hover:text-[#3F8E00]">
               Timeline
             </a>
           </li>

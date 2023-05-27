@@ -6,7 +6,7 @@ export default function Timeline() {
       id="timeline"
       class="flex min-h-screen items-center justify-center pt-20"
     >
-      <div class="w-auto md:w-80">
+      <div class="w-auto container md:w-80">
         <h2 class="text-[30px] font-semibold text-gray-300 mb-7">
           Learning Timeline
         </h2>
