@@ -16,11 +16,8 @@ const About = () => {
             />
           </div>
           <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[3%] py-[2%]">
-            <h1 className="text-green-300 text-xl sm:text-[30px] font-semibold mb-3">
-              My name is John Loyd
-            </h1>
             <div className="flex flex-col gap-3">
-              <p className="w-auto  tracking-wide md:text-sm text-xs leading-10 ">
+              <p className="w-auto  tracking-wide md:text-sm leading-10 ">
                 👋 Hi, I'm John Loyd, a self-taught web developer from
                 Philippines.
               </p>
