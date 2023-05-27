@@ -55,6 +55,7 @@ const Hero = () => {
         <div className="absolute w-auto top-[23%] flex justify-center items-center">
           {isInView && (
             <motion.h2
+              key="web"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -77,6 +78,7 @@ const Hero = () => {
         <div className="absolute md:top-[23%]">
           {isInView && (
             <motion.img
+              key="img"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -97,6 +99,7 @@ const Hero = () => {
           )}
           {isInView && (
             <motion.div
+              key="start"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
