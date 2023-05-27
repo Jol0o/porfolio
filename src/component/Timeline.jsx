@@ -199,16 +199,14 @@ export default function Timeline() {
               <h1 className="font-semibold text-md text-white">NextJs</h1>
               <p className="text-sm text-gray-400">9-10-2022</p>
               <p className="mt-2 text-gray-400 text-sm">
-                When i finish my reactjs journey i starter to learn Its
-                framework which is the nextjs. I started at new release version
-                13. Next.js is a framework built on top of React that allows you
-                to build server-side rendered React applications with ease. It
-                provides many features out of the box, such as automatic code
-                splitting, optimized performance, and SEO-friendly rendering.
+                Next.js is a React framework for building server-side rendered
+                applications. It offers features like automatic code splitting,
+                optimized performance, and SEO-friendly rendering. It simplifies
+                the development of robust web applications by leveraging React's
+                power.
               </p>
             </motion.div>
           </li>
-
           {/* Add the remaining list items */}
         </ul>
       </motion.div>

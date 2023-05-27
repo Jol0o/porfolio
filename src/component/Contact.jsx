@@ -1,5 +1,54 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+
+const leftVariants = {
+  offscreen: {
+    opacity: 0,
+    scale: 0.5,
+    x: -300,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 3,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
+
+const rightVariants = {
+  offscreen: {
+    opacity: 0,
+    scale: 0.5,
+    x: 300,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 3,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
 
 export default function Contact() {
   const form = useRef();
@@ -28,8 +77,17 @@ export default function Contact() {
       id="contact"
       className="w-full min-h-screen flex justify-center items-center "
     >
-      <div className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-0 sm:p-10">
-        <div className="md:h-full md:w-full flex flex-col  w-full">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ staggerChildren: 0.5 }}
+        className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-0 sm:p-10"
+      >
+        <motion.div
+          variants={leftVariants}
+          className="md:h-full md:w-full flex flex-col  w-full"
+        >
           <h1 className="text-3xl md:text-5xl font-bold text-green-500 mb-2">
             Get in touch
           </h1>
@@ -42,8 +100,9 @@ export default function Contact() {
             to get back to you within the next 48 hours. Let's work together to
             bring your vision to life!
           </p>
-        </div>
-        <form
+        </motion.div>
+        <motion.form
+          variants={rightVariants}
           ref={form}
           id="contact-form"
           onSubmit={sendEmail}
@@ -84,8 +143,8 @@ export default function Contact() {
           <button className="self-start h-10 w-28 bg-green-500 rounded-full shadow-md mt-3 shadow-green-500 font-bold text-lg">
             Send
           </button>
-        </form>
-      </div>
+        </motion.form>
+      </motion.div>
     </div>
   );
 }
