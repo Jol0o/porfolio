@@ -5,14 +5,6 @@ import { AiFillInstagram } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowDown } from "react-icons/bs";
 
-const textAnimate = {
-  offscreen: { opacity: 0 },
-  onscreen: {
-    opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
-  },
-};
-
 const Hero = () => {
   const scrollToContent = () => {
     const contentElement = document.getElementById("project");
@@ -56,26 +48,38 @@ const Hero = () => {
           </a>
         </li>
       </ul>
-      <div className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col ">
+      <div
+        ref={ref}
+        className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col "
+      >
         <div className="absolute w-auto top-[23%] flex justify-center items-center">
-          <motion.h2
-            variants={textAnimate}
-            className="text-center w-fit font-bold font-mono text-[36px] whitespace-nowrap sm:text-[90px] md:text-[110px] lg:text-[140px] xl:text-[190px] uppercase"
-          >
-            Web Developer.
-          </motion.h2>
+          {isInView && (
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              className="text-center w-fit font-bold font-mono text-[36px] whitespace-nowrap sm:text-[90px] md:text-[110px] lg:text-[140px] xl:text-[190px] uppercase"
+            >
+              Web Developer.
+            </motion.h2>
+          )}
         </div>
         <div className="absolute md:top-[23%]">
           <motion.img
-            variants={textAnimate}
             src="./avatar.png"
             alt="avatar"
             className=" rounded-full bg-gradient-to-b from-[#13a049a9] to-[#45d8d85e] shadow-lg  shadow-[#13a04968] h-80 w-80 md:w-[400px] md:h-[400px] "
           />
-          <motion.div
-            variants={textAnimate}
-            className="flex items-center cursor-auto justify-center mt-10"
-          >
+          <motion.div className="flex items-center cursor-auto justify-center mt-10">
             <button className="text-green-500 text-xl">
               Let's get Started.
             </button>
