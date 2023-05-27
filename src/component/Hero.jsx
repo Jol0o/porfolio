@@ -15,10 +15,7 @@ const Hero = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div
-      ref={ref}
-      className="h-screen w-full pt-3 text-white font-mono relative bg-[url('/world.png')] inset-0  bg-cover bg-center"
-    >
+    <div className="h-screen w-full pt-3 text-white font-mono relative bg-[url('/world.png')] inset-0  bg-cover bg-center">
       <ul className="hidden lg:flex flex-col top-[45%] transition fixed left-[0] gap-1 uppercase font-semibold text-2xl z-10 text-[#9C9C9C]">
         <li className="ml-[-109px] hover:ml-[5px]  ease-out duration-300 hover:text-cyan-500 ">
           <a
@@ -51,7 +48,6 @@ const Hero = () => {
           </a>
         </li>
       </ul>
-
       <div className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col ">
         <div className="absolute w-auto top-[23%] flex justify-center items-center">
           <motion.h2
