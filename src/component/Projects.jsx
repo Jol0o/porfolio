@@ -121,8 +121,7 @@ const Projects = () => {
               return (
                 <a href={item.link} target="_blank">
                   <div className="w-[270px  ] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
-                    <motion.img
-                      variants={cardVariants}
+                    <img
                       src={item.img}
                       alt="image"
                       className="w-full min-h-fit rounded-xl hover:scale-[1.02] transition"
