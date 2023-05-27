@@ -66,11 +66,21 @@ const Hero = () => {
             alt="avatar"
             className=" rounded-full bg-gradient-to-b from-[#13a049a9] to-[#45d8d85e] shadow-lg  shadow-[#13a04968] h-80 w-80 md:w-[400px] md:h-[400px] "
           />
-          <div className="flex items-center justify-center mt-10">
+          <motion.div
+            transition={{
+              delay: 0.5,
+              duration: 0.8,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            className="flex items-center cursor-auto justify-center mt-10"
+          >
             <button className="text-green-500 text-xl">
               Let's get Started.
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="z-0 animate-bounce absolute left-1/2 transform -translate-x-1/2 top-[90%] rounded-full hover:bg-green-400 transition bg-[#3F8E00] py-3 px-3">
