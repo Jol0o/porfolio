@@ -45,6 +45,7 @@ const Projects = () => {
 
   return (
     <div
+      ref={ref}
       className="min-h-[60vh] snap-start w-full text-white flex justify-center items-center my-16"
       id="project"
     >
