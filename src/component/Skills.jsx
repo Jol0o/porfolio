@@ -17,7 +17,7 @@ const topVariants = {
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
-        damping: 5,
+        damping: 7,
         stiffness: 100,
         restDelta: 0.001,
       },
@@ -41,7 +41,7 @@ const bottomVariants = {
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
-        damping: 5,
+        damping: 7,
         stiffness: 100,
         restDelta: 0.001,
       },
