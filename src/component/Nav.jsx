@@ -33,8 +33,8 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="" className="hover:text-[#3F8E00]">
-              Portfolio
+            <a href="timeline" className="hover:text-[#3F8E00]">
+              Timeline
             </a>
           </li>
           <a href="#contact">
