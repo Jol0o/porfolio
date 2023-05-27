@@ -1,4 +1,5 @@
-import React from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 const Projects = () => {
   const info = [
@@ -38,6 +39,10 @@ const Projects = () => {
       tool: ["HTML ", "REACT.JS"],
     },
   ];
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div
       className="min-h-[60vh] snap-start w-full text-white flex justify-center items-center my-16"
@@ -45,9 +50,25 @@ const Projects = () => {
     >
       <div className="flex flex-col">
         <div className="flex flex-col items-center justify-center mx-[2%]">
-          <h1 className="text-3xl md:text-5xl font-bold text-green-500  pb-2">
-            Selected Projects
-          </h1>
+          {isInView && (
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 3,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
+              className="text-3xl md:text-5xl font-bold text-green-500  pb-2"
+            >
+              Selected Projects
+            </motion.h1>
+          )}
           <p className="fonr-medium text-center text-xs md:text-sm mt-2 text-gray-500">
             Here are a few of the projects I have worked on and am proud to
             showcase:
@@ -59,25 +80,55 @@ const Projects = () => {
               return (
                 <a href={item.link} target="_blank">
                   <div className="w-[270px  ] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
-                    <img
-                      src={item.img}
-                      alt="image"
-                      className="w-full min-h-fit rounded-xl hover:scale-[1.02] transition"
-                    />
-                    <div className="flex justify-between items-center mt-2">
-                      <div>
-                        <h1 className="font-semibold text-sm">{item.name}</h1>
-                      </div>
-                      <div className="flex gap-2">
-                        {item.tool.map((tool) => {
-                          return (
-                            <h1 className="text-[10px] font-semibold bg-green-800 rounded-lg p-1">
-                              {tool}
-                            </h1>
-                          );
-                        })}
-                      </div>
-                    </div>
+                    {isInView && (
+                      <motion.img
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0, rotate: [0, 10, 0] }}
+                        transition={{
+                          duration: 0.3,
+                          ease: [0, 0.71, 0.2, 1.01],
+                          scale: {
+                            type: "spring",
+                            damping: 5,
+                            stiffness: 100,
+                            restDelta: 0.001,
+                          },
+                        }}
+                        src={item.img}
+                        alt="image"
+                        className="w-full min-h-fit rounded-xl hover:scale-[1.02] transition"
+                      />
+                    )}
+                    {isInView && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.3,
+                          ease: [0, 0.71, 0.2, 1.01],
+                          scale: {
+                            type: "spring",
+                            damping: 5,
+                            stiffness: 100,
+                            restDelta: 0.001,
+                          },
+                        }}
+                        className="flex justify-between items-center mt-2"
+                      >
+                        <div>
+                          <h1 className="font-semibold text-sm">{item.name}</h1>
+                        </div>
+                        <div className="flex gap-2">
+                          {item.tool.map((tool) => {
+                            return (
+                              <h1 className="text-[10px] font-semibold bg-green-800 rounded-lg p-1">
+                                {tool}
+                              </h1>
+                            );
+                          })}
+                        </div>
+                      </motion.div>
+                    )}
                   </div>
                 </a>
               );
