@@ -208,34 +208,7 @@ export default function Timeline() {
               </p>
             </motion.div>
           </li>
-          <li className="relative flex items-baseline gap-6 pb-5">
-            <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                className="bi bi-circle-fill fill-green-500"
-                viewBox="0 0 16 16"
-              >
-                <circle cx="8" cy="8" r="8" />
-              </svg>
-            </div>
-            <motion.div variants={timelineVariants}>
-              <h1 className="font-semibold text-md text-white">Tailwind CSS</h1>
-              <p className="text-sm text-gray-400">15-2-2023</p>
-              <p className="mt-2 text-gray-400 text-sm">
-                Tailwind is a popular utility-first CSS framework that can help
-                streamline the process of styling web pages. By using Tailwind,
-                developers can quickly create responsive and visually appealing
-                designs by applying pre-defined classes to HTML elements.
-                Learning Tailwind involves understanding its core concepts, such
-                as the grid system and utility classes, as well as its extensive
-                library of pre-defined styles. With Tailwind, developers can
-                focus on building functionality and let the framework handle the
-                styling, resulting in faster and more efficient development.
-              </p>
-            </motion.div>
-          </li>
+
           {/* Add the remaining list items */}
         </ul>
       </motion.div>
