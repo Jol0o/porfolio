@@ -5,6 +5,10 @@ import { AiFillGithub } from "react-icons/ai";
 import { BsArrowDown } from "react-icons/bs";
 
 const Hero = () => {
+  const scrollToContent = () => {
+    const contentElement = document.getElementById("project");
+    contentElement.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="h-screen w-full pt-3 text-white font-mono relative bg-[url('/world.png')] inset-0  bg-cover bg-center">
       <ul className="hidden lg:flex flex-col top-[45%] transition fixed left-[0] gap-1 uppercase font-semibold text-2xl z-10 text-[#9C9C9C]">
@@ -59,9 +63,9 @@ const Hero = () => {
         </div>
       </div>
       <div className="z-0 animate-bounce absolute left-1/2 transform -translate-x-1/2 top-[90%] rounded-full hover:bg-green-400 transition bg-[#3F8E00] py-3 px-3">
-        <a href="">
+        <button onClick={scrollToContent}>
           <BsArrowDown />
-        </a>
+        </button>
       </div>
     </div>
   );
