@@ -48,8 +48,8 @@ const Hero = () => {
         <div className="absolute w-auto top-[23%] flex justify-center items-center">
           <motion.h2
             transition={{ delay: 0.7 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             className="text-center w-fit font-bold font-mono text-[36px] whitespace-nowrap sm:text-[90px] md:text-[110px] lg:text-[140px] xl:text-[190px] uppercase"
           >
