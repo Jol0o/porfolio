@@ -69,7 +69,7 @@ const Hero = () => {
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: false, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.8 }}
         transition={{ staggerChildren: 0.5 }}
         className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col "
       >
