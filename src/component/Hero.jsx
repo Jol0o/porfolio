@@ -12,7 +12,8 @@ const cardVariants = {
   onscreen: {
     opacity: 1,
     transition: {
-      duration: 0.3,
+      dalay: 0.5,
+      duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
