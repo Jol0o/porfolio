@@ -12,9 +12,14 @@ const cardVariants = {
   onscreen: {
     opacity: 1,
     transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
+      duration: 0.3,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
     },
   },
 };
@@ -63,6 +68,7 @@ const Hero = () => {
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
+        transition={{ staggerChildren: 0.5 }}
         className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col "
       >
         <div className="absolute w-auto top-[23%] flex justify-center items-center">
