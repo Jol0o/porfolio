@@ -18,7 +18,7 @@ const Projects = () => {
       name: "K's",
       img: "./project/k.jpeg",
       tool: ["HTML ", " JS"],
-      link: "https://food-hubs.netlify.app",
+      link: "https://kproject.netlify.app",
     },
     {
       name: "KFC",
