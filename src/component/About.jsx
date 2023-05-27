@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const About = () => {
+const About = ({ isVisible }) => {
   return (
     <div
       className="snap-start text-white w-full min-h-[70vh] flex justify-center items-center flex-col font-mono mb-[3%]"
@@ -9,23 +9,25 @@ const About = () => {
     >
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row justify-evenly items-center w-fit  mx-auto  rounded-xl">
-          <motion.div
-            transition={{
-              delay: 0.5,
-              duration: 0.8,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -10 }}
-            className="w-full flex justify-center items-center sm:w-1/2 before:bg-white before:absolute before:content-none"
-          >
-            <img
-              src="/me1.png"
-              alt="me"
-              className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[300px] sm:h-[400px] w-auto sm:w-[400px]"
-            />
-          </motion.div>
+          {isVisible && (
+            <motion.div
+              transition={{
+                delay: 0.5,
+                duration: 0.8,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              className="w-full flex justify-center items-center sm:w-1/2 before:bg-white before:absolute before:content-none"
+            >
+              <img
+                src="/me1.png"
+                alt="me"
+                className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[300px] sm:h-[400px] w-auto sm:w-[400px]"
+              />
+            </motion.div>
+          )}
           <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[3%] py-[2%]">
             <motion.div
               transition={{
