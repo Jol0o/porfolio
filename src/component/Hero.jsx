@@ -9,19 +9,31 @@ const Hero = () => {
     <div className="h-screen w-full pt-3 text-white font-mono relative bg-[url('/world.png')] inset-0  bg-cover bg-center">
       <ul className="hidden lg:flex flex-col top-[45%] transition fixed left-[0] gap-1 uppercase font-semibold text-2xl z-10 text-[#9C9C9C]">
         <li className="ml-[-109px] hover:ml-[5px]  ease-out duration-300 hover:text-cyan-500 ">
-          <a href="" className="flex gap-2 items-center ">
+          <a
+            href="https://www.facebook.com/jol0oo"
+            target="_blank"
+            className="flex gap-2 items-center "
+          >
             <h1> Facebook</h1>
             <AiFillFacebook />
           </a>
         </li>
         <li className="ml-[-121px] hover:ml-[5px] ease-out duration-300 hover:text-[#A8274D] ">
-          <a href="" className="flex gap-2 items-center ">
+          <a
+            href="https://www.instagram.com/j0lo_o/"
+            target="_blank"
+            className="flex gap-2 items-center "
+          >
             <h1>Instagram</h1>
             <AiFillInstagram />
           </a>
         </li>
         <li className="ml-[-80px] hover:ml-[10px]  ease-out duration-300 hover:text-white ">
-          <a href="" className="flex gap-2 items-center ">
+          <a
+            href="https://github.com/Jol0o"
+            target="_blank"
+            className="flex gap-2 items-center "
+          >
             <h1> Github</h1>
             <AiFillGithub />
           </a>
@@ -46,7 +58,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="z-0 animate-bounce absolute left-1/2 top-[90%] rounded-full hover:bg-green-400 transition bg-[#3F8E00] py-3 px-3">
+      <div className="z-0 animate-bounce absolute left-1/2 transform -translate-x-1/2 top-[90%] rounded-full hover:bg-green-400 transition bg-[#3F8E00] py-3 px-3">
         <a href="">
           <BsArrowDown />
         </a>
