@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className="w-full min-h-[20vh] text-gray-300 mt-3">
       <div className="max-w-[95%] flex-col md:flex-row  flex flex-r py-10 justify-between items-center h-full mx-auto border-green-900 border-t-2">
-        <div className="flex flex-col ">
+        <div className="flex flex-col items-center justify-center md:items-start md:justify-start">
           <h1 className="font-bold text-3xl mb-10">JOLO.</h1>
           <p className="font-semibold text-xs text-green-900 ">
             Designed by John loyd.
