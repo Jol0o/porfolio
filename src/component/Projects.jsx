@@ -10,9 +10,15 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
+      delay: 0.4,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
     },
   },
 };
@@ -26,9 +32,15 @@ const textVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
+      delay: 0.4,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
     },
   },
 };
@@ -100,7 +112,10 @@ const Projects = () => {
             showcase:
           </motion.p>
         </div>
-        <div className="max-w-[1400px] flex items-center justify-center mx-auto my-5">
+        <motion.div
+          variants={cardVariants}
+          className="max-w-[1400px] flex items-center justify-center mx-auto my-5"
+        >
           <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
             {info.map((item) => {
               return (
@@ -135,7 +150,7 @@ const Projects = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );
