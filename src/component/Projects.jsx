@@ -4,9 +4,27 @@ import React, { useRef } from "react";
 const cardVariants = {
   offscreen: {
     opacity: 0,
+    y: -100,
   },
   onscreen: {
     opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
+const textVariants = {
+  offscreen: {
+    opacity: 0,
+    y: -100,
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
     transition: {
       type: "spring",
       bounce: 0.4,
@@ -59,28 +77,28 @@ const Projects = () => {
       className="min-h-[60vh] snap-start w-full text-white flex justify-center items-center my-16"
       id="project"
     >
-      <div className="flex flex-col">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ staggerChildren: 0.5 }}
+        className="flex flex-col"
+      >
         <div className="flex flex-col items-center justify-center mx-[2%]">
           <motion.h1
-            key="project"
-            initial={{ opacity: 0, scale: 0.5, y: -50 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.5,
-              type: "spring",
-              damping: 8,
-              stiffness: 100,
-            }}
+            variants={textVariants}
             className="text-3xl md:text-5xl font-bold text-green-500 pb-2"
           >
             Selected Projects
           </motion.h1>
 
-          <p className="fonr-medium text-center text-xs md:text-sm mt-2 text-gray-500">
+          <motion.p
+            variants={textVariants}
+            className="fonr-medium text-center text-xs md:text-sm mt-2 text-gray-500"
+          >
             Here are a few of the projects I have worked on and am proud to
             showcase:
-          </p>
+          </motion.p>
         </div>
         <div className="max-w-[1400px] flex items-center justify-center mx-auto my-5">
           <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
@@ -89,38 +107,14 @@ const Projects = () => {
                 <a href={item.link} target="_blank">
                   <div className="w-[270px  ] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
                     <motion.img
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0, rotate: [0, 10, 0] }}
-                      transition={{
-                        duration: 0.7,
-                        delay: 0.5,
-                        ease: [0, 0.71, 0.2, 1.01],
-                        scale: {
-                          type: "spring",
-                          damping: 5,
-                          stiffness: 100,
-                          restDelta: 0.001,
-                        },
-                      }}
+                      variants={cardVariants}
                       src={item.img}
                       alt="image"
                       className="w-full min-h-fit rounded-xl hover:scale-[1.02] transition"
                     />
 
                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.7,
-                        delay: 0.5,
-                        ease: [0, 0.71, 0.2, 1.01],
-                        scale: {
-                          type: "spring",
-                          damping: 5,
-                          stiffness: 100,
-                          restDelta: 0.001,
-                        },
-                      }}
+                      variants={cardVariants}
                       className="flex justify-between items-center mt-2"
                     >
                       <div>
@@ -142,7 +136,7 @@ const Projects = () => {
             })}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
