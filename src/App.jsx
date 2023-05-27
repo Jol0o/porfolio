@@ -7,19 +7,22 @@ import Contact from "./component/Contact";
 import Skills from "./component/Skills";
 import Footer from "./component/Footer";
 import Timeline from "./component/Timeline";
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   return (
-    <div className="bg-[#090E16] w-full snap-x">
-      <Nav />
-      <Hero />
-      <Projects />
-      <About />
-      <Skills />
-      <Timeline />
-      <Contact />
-      <Footer />
-    </div>
+    <AnimatePresence>
+      <div className="bg-[#090E16] w-full snap-x">
+        <Nav />
+        <Hero />
+        <Projects />
+        <About />
+        <Skills />
+        <Timeline />
+        <Contact />
+        <Footer />
+      </div>
+    </AnimatePresence>
   );
 };
 

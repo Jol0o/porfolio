@@ -13,13 +13,13 @@ export default function Footer() {
         <div>
           <ul className="flex flex-col md:flex-row gap-8 font-thin text-sm">
             <li className="hover:border-2 hover:border-green-500 h-10 w-16 rounded-full flex items-center justify-center transition">
-              Home
+              <a href="/">Home</a>
             </li>
             <li className="hover:border-2 hover:border-green-500 h-10 w-16 rounded-full flex items-center justify-center transition">
-              About Me
+              <a href="#about">About Me</a>
             </li>
             <li className="hover:border-2 hover:border-green-500 h-10 w-16 rounded-full flex items-center justify-center transition">
-              Contact
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>

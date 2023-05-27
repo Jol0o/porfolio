@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
@@ -45,9 +46,15 @@ const Hero = () => {
       </ul>
       <div className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col ">
         <div className="absolute w-auto top-[23%] flex justify-center items-center">
-          <h2 className="text-center w-fit font-bold font-mono text-[36px] whitespace-nowrap sm:text-[90px] md:text-[110px] lg:text-[140px] xl:text-[190px] uppercase">
+          <motion.h2
+            transition={{ delay: 0.7 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="text-center w-fit font-bold font-mono text-[36px] whitespace-nowrap sm:text-[90px] md:text-[110px] lg:text-[140px] xl:text-[190px] uppercase"
+          >
             Web Developer.
-          </h2>
+          </motion.h2>
         </div>
         <div className="absolute md:top-[23%]">
           <img
