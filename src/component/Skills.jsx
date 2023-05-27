@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-export default function Skills() {
+export default function Skills({ isVisible }) {
   const skills = [
     "/Skill/Github.png",
     "/Skill/Group 1.png",
@@ -14,19 +14,21 @@ export default function Skills() {
   ];
   return (
     <div className="w-full min-h-[30vh] flex flex-col items-center justify-center mt-[3%]">
-      <motion.div
-        transition={{
-          delay: 0.5,
-          duration: 0.8,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0 }}
-        className="text-green-400 font-bold bg-green-900 w-fit rounded-lg px-2"
-      >
-        🧑‍💻 Skill & Experience
-      </motion.div>
+      {isVisible && (
+        <motion.div
+          transition={{
+            delay: 0.5,
+            duration: 0.8,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          className="text-green-400 font-bold bg-green-900 w-fit rounded-lg px-2"
+        >
+          🧑‍💻 Skill & Experience
+        </motion.div>
+      )}
       <div className="flex items-center justify-center flex-col">
         <h1 className="my-4 font-bold text-center text-[40px] text-white">
           Technologies and skills
