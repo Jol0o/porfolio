@@ -9,14 +9,32 @@ const About = () => {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row justify-evenly items-center w-fit  mx-auto  rounded-xl">
           <div className="w-full flex justify-center items-center sm:w-1/2 before:bg-white before:absolute before:content-none">
-            <img
+            <motion.img
+              transition={{
+                delay: 0.5,
+                duration: 0.8,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
               src="/me1.png"
               alt="me"
               className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[300px] sm:h-[400px] w-auto sm:w-[400px]"
             />
           </div>
           <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[3%] py-[2%]">
-            <div className="flex flex-col gap-3">
+            <motion.div
+              transition={{
+                delay: 0.5,
+                duration: 0.8,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="flex flex-col gap-3"
+            >
               <p className="w-auto  tracking-wide md:text-sm leading-10 ">
                 👋 Hi, I'm John Loyd, a self-taught web developer from
                 Philippines.
@@ -31,7 +49,7 @@ const About = () => {
                 together. If you have any questions or would like to work with
                 me, please reach out.
               </p>
-            </div>
+            </motion.div>
 
             <button className="border border-green-500 text-green-500 bg-transparent h-10 w-36 relative rounded-md mt-5">
               <div className="absolute bottom-8 left-[135px]">
