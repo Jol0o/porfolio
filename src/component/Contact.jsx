@@ -18,9 +18,8 @@ const leftVariants = {
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
-        damping: 3,
+        damping: 1,
         stiffness: 100,
-        restDelta: 0.001,
       },
     },
   },
@@ -42,9 +41,8 @@ const rightVariants = {
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
-        damping: 3,
+        damping: 1,
         stiffness: 100,
-        restDelta: 0.001,
       },
     },
   },
