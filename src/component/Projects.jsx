@@ -94,7 +94,7 @@ const Projects = () => {
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
         transition={{ staggerChildren: 0.5 }}
-        className="flex flex-col"
+        className="flex flex-col container m-auto"
       >
         <div className="flex flex-col items-center justify-center mx-[2%]">
           <motion.h1
