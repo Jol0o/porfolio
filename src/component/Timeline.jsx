@@ -67,7 +67,10 @@ export default function Timeline() {
           Learning Timeline
         </motion.h2>
         <ul>
-          <li className="relative flex items-baseline gap-6 pb-5">
+          <motion.li
+            variants={timelineVariants}
+            className="relative flex items-baseline gap-6 pb-5"
+          >
             <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,16 +82,19 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <motion.div variants={timelineVariants}>
+            <div variants={timelineVariants}>
               <h1 className="font-semibold text-md text-white">HTML & CSS</h1>
               <p className="text-sm text-gray-400">12-8-2022</p>
               <p className="mt-2 text-gray-400 text-sm">
                 HTML and CSS basics: Start by learning the fundamentals of HTML
                 and CSS, including syntax, semantics, and page structure.
               </p>
-            </motion.div>
-          </li>
-          <li className="relative flex items-baseline gap-6 pb-5">
+            </div>
+          </motion.li>
+          <motion.li
+            variants={timelineVariants}
+            className="relative flex items-baseline gap-6 pb-5"
+          >
             <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +106,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <motion.div variants={timelineVariants}>
+            <div>
               <h1 className="font-semibold text-md text-white">
                 Responsive Design
               </h1>
@@ -109,10 +115,13 @@ export default function Timeline() {
                 Learn how to create responsive layouts that adapt to different
                 screen sizes, using tools such as media queries and flexbox.
               </p>
-            </motion.div>
-          </li>
+            </div>
+          </motion.li>
 
-          <li className="relative flex items-baseline gap-6 pb-5">
+          <motion.li
+            variants={timelineVariants}
+            className="relative flex items-baseline gap-6 pb-5"
+          >
             <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +133,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <motion.div variants={timelineVariants}>
+            <div>
               <h1 className="font-semibold text-md text-white">
                 JavaScript fundamentals
               </h1>
@@ -133,9 +142,12 @@ export default function Timeline() {
                 Get familiar with the basics of JavaScript, including variables,
                 data types, functions, and control structures.
               </p>
-            </motion.div>
-          </li>
-          <li className="relative flex items-baseline gap-6 pb-5">
+            </div>
+          </motion.li>
+          <motion.li
+            variants={timelineVariants}
+            className="relative flex items-baseline gap-6 pb-5"
+          >
             <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +159,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <motion.div variants={timelineVariants}>
+            <div>
               <h1 className="font-semibold text-md text-white">
                 DOM manipulation
               </h1>
@@ -156,9 +168,12 @@ export default function Timeline() {
                 Learn how to manipulate the Document Object Model (DOM) using
                 JavaScript to create interactive web pages.
               </p>
-            </motion.div>
-          </li>
-          <li className="relative flex items-baseline gap-6 pb-5">
+            </div>
+          </motion.li>
+          <motion.li
+            variants={timelineVariants}
+            className="relative flex items-baseline gap-6 pb-5"
+          >
             <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +185,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <motion.div variants={timelineVariants}>
+            <div>
               <h1 className="font-semibold text-md text-white">
                 JavaScript frameworks and libraries
               </h1>
@@ -181,9 +196,12 @@ export default function Timeline() {
                 frameworks and libraries can help me create complex web
                 applications more easily and efficiently.
               </p>
-            </motion.div>
-          </li>
-          <li className="relative flex items-baseline gap-6 pb-5">
+            </div>
+          </motion.li>
+          <motion.li
+            variants={timelineVariants}
+            className="relative flex items-baseline gap-6 pb-5"
+          >
             <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +213,7 @@ export default function Timeline() {
                 <circle cx="8" cy="8" r="8" />
               </svg>
             </div>
-            <motion.div variants={timelineVariants}>
+            <div>
               <h1 className="font-semibold text-md text-white">NextJs</h1>
               <p className="text-sm text-gray-400">9-10-2022</p>
               <p className="mt-2 text-gray-400 text-sm">
@@ -205,8 +223,8 @@ export default function Timeline() {
                 the development of robust web applications by leveraging React's
                 power.
               </p>
-            </motion.div>
-          </li>
+            </div>
+          </motion.li>
           {/* Add the remaining list items */}
         </ul>
       </motion.div>
