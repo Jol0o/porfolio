@@ -27,7 +27,7 @@ const timelineVariants = {
   offscreen: {
     opacity: 0,
     scale: 0.5,
-    x: 300,
+    x: 100,
   },
   onscreen: {
     opacity: 1,

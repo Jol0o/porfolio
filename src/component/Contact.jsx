@@ -6,7 +6,7 @@ const leftVariants = {
   offscreen: {
     opacity: 0,
     scale: 0.5,
-    x: -300,
+    x: -100,
   },
   onscreen: {
     opacity: 1,
@@ -29,7 +29,7 @@ const rightVariants = {
   offscreen: {
     opacity: 0,
     scale: 0.5,
-    x: 300,
+    x: 100,
   },
   onscreen: {
     opacity: 1,
