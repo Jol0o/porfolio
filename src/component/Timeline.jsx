@@ -77,7 +77,7 @@ export default function Timeline() {
       id="timeline"
       className="flex min-h-screen w-full items-center justify-center pt-20"
     >
-      <div className="w-full container md:max-w-md">
+      <div className="w-full container h-full md:max-w-md">
         <Card>
           <h2 className="text-[30px] font-semibold text-gray-300 mb-7 text-center">
             Learning Timeline
