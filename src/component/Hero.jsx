@@ -8,6 +8,30 @@ const cardVariants = {
   offscreen: {
     opacity: 0,
     scale: 0.5,
+    x: 100,
+  },
+  onscreen: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      delay: 0.4,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 6,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
+
+const textVariants = {
+  offscreen: {
+    opacity: 0,
+    scale: 0.5,
   },
   onscreen: {
     opacity: 1,
@@ -25,6 +49,32 @@ const cardVariants = {
     },
   },
 };
+
+function TextCard({ children }) {
+  return (
+    <motion.div
+      className="card-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <motion.div variants={textVariants}>{children}</motion.div>
+    </motion.div>
+  );
+}
+
+function Card({ children }) {
+  return (
+    <motion.div
+      className="card-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <motion.div variants={cardVariants}>{children}</motion.div>
+    </motion.div>
+  );
+}
 
 const Hero = () => {
   const scrollToContent = () => {
