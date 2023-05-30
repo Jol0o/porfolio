@@ -55,17 +55,17 @@ export default function Timeline() {
       id="timeline"
       className="flex min-h-screen w-full items-center justify-center pt-20"
     >
-      <div className="w-auto container md:w-80">
+      <div className="w-full container md:max-w-md">
         <motion.h2
           variants={headVariants}
-          className="text-[30px] font-semibold text-gray-300 mb-7"
+          className="text-[30px] font-semibold text-gray-300 mb-7 text-center"
         >
           Learning Timeline
         </motion.h2>
         <ul>
           <motion.li
             variants={timelineVariants}
-            className="relative flex items-baseline gap-6 pb-5"
+            className="relative flex flex-col items-center md:flex-row md:items-baseline gap-6 pb-5"
           >
             <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
               <svg
@@ -79,14 +79,18 @@ export default function Timeline() {
               </svg>
             </div>
             <div variants={timelineVariants}>
-              <h1 className="font-semibold text-md text-white">HTML & CSS</h1>
-              <p className="text-sm text-gray-400">12-8-2022</p>
-              <p className="mt-2 text-gray-400 text-sm">
+              <h1 className="font-semibold text-md text-white text-center md:text-left">
+                HTML & CSS
+              </h1>
+              <p className="text-sm text-gray-400 text-center md:text-left">
+                12-8-2022
+              </p>
+              <p className="mt-2 text-gray-400 text-sm text-center md:text-left">
                 HTML and CSS basics: Start by learning the fundamentals of HTML
                 and CSS, including syntax, semantics, and page structure.
               </p>
             </div>
-          </motion.li>
+          </motion.li>{" "}
           <motion.li
             variants={timelineVariants}
             className="relative flex items-baseline gap-6 pb-5"
@@ -113,7 +117,6 @@ export default function Timeline() {
               </p>
             </div>
           </motion.li>
-
           <motion.li
             variants={timelineVariants}
             className="relative flex items-baseline gap-6 pb-5"
