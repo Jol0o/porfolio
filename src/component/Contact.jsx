@@ -103,7 +103,7 @@ export default function Contact() {
     >
       <div className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-0 sm:p-10">
         <TextCard>
-          <div className="md:h-full md:w-full flex flex-col  w-full">
+          <div className="md:h-full md:w-full flex flex-col w-full">
             <h1 className="text-3xl md:text-5xl font-bold text-green-500 mb-2">
               Get in touch
             </h1>
@@ -118,13 +118,13 @@ export default function Contact() {
             </p>
           </div>
         </TextCard>
-        <form
-          ref={form}
-          id="contact-form"
-          onSubmit={sendEmail}
-          className="md:h-full min-h-fit flex flex-col justify-center w-full"
-        >
-          <FormCard>
+        <FormCard>
+          <form
+            ref={form}
+            id="contact-form"
+            onSubmit={sendEmail}
+            className="md:h-full min-h-fit flex flex-col justify-center min-w-full"
+          >
             <div>
               <label htmlFor="user_name" className="font-semibold text-xs mb-2">
                 Your Name
@@ -169,8 +169,8 @@ export default function Contact() {
             <button className="self-start h-10 w-28 bg-green-500 rounded-full shadow-md mt-3 shadow-green-500 font-bold text-lg">
               Send
             </button>
-          </FormCard>
-        </form>
+          </form>
+        </FormCard>
       </div>
     </div>
   );
