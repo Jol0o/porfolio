@@ -47,17 +47,15 @@ const timelineVariants = {
 
 export default function Timeline() {
   return (
-    <section
+    <motion.section
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      transition={{ staggerChildren: 0.5 }}
       id="timeline"
       className="flex min-h-screen w-full items-center justify-center pt-20"
     >
-      <motion.div
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-        transition={{ staggerChildren: 0.5 }}
-        className="w-auto container md:w-80"
-      >
+      <div className="w-auto container md:w-80">
         <motion.h2
           variants={headVariants}
           className="text-[30px] font-semibold text-gray-300 mb-7"
@@ -225,7 +223,7 @@ export default function Timeline() {
           </motion.li>
           {/* Add the remaining list items */}
         </ul>
-      </motion.div>
-    </section>
+      </div>
+    </motion.section>
   );
 }
