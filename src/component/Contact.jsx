@@ -118,7 +118,6 @@ export default function Contact() {
             </p>
           </div>
         </TextCard>
-
         <form
           ref={form}
           id="contact-form"
@@ -126,38 +125,47 @@ export default function Contact() {
           className="md:h-full min-h-fit flex flex-col justify-center w-full"
         >
           <FormCard>
-            <label htmlFor="user_name" className="font-semibold text-xs mb-2">
-              Your Name
-            </label>
-            <input
-              type="text"
-              id="user_name"
-              name="user_name"
-              className="py-2 px-5 text-white caret-green-500 font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
-              placeholder="Enter your name"
-              required
-            />
-            <label htmlFor="user_email" className="font-semibold text-xs mb-2">
-              Your Email
-            </label>
-            <input
-              type="email"
-              id="user_email"
-              name="user_email"
-              placeholder="Enter your email"
-              className="py-2 px-5 text-white font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
-              required
-            />
-            <label htmlFor="message" className="font-semibold text-xs mb-2">
-              Tell me a bit more what you are looking for?
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message"
-              className="min-h-[200px] py-2 px-5 text-white font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
-              required
-            />
+            <div>
+              <label htmlFor="user_name" className="font-semibold text-xs mb-2">
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="user_name"
+                name="user_name"
+                className="py-2 px-5 text-white caret-green-500 font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="user_email"
+                className="font-semibold text-xs mb-2"
+              >
+                Your Email
+              </label>
+              <input
+                type="email"
+                id="user_email"
+                name="user_email"
+                placeholder="Enter your email"
+                className="py-2 px-5 text-white font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="font-semibold text-xs mb-2">
+                Tell me a bit more what you are looking for?
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Enter your message"
+                className="min-h-[200px] py-2 px-5 text-white font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
+                required
+              />
+            </div>
             <button className="self-start h-10 w-28 bg-green-500 rounded-full shadow-md mt-3 shadow-green-500 font-bold text-lg">
               Send
             </button>
