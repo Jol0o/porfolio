@@ -56,9 +56,7 @@ function FormCard({ children }) {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
     >
-      <motion.div className="w-full" variants={FormVariants}>
-        {children}
-      </motion.div>
+      <motion.div variants={FormVariants}>{children}</motion.div>
     </motion.div>
   );
 }
@@ -125,7 +123,7 @@ export default function Contact() {
             ref={form}
             id="contact-form"
             onSubmit={sendEmail}
-            className="md:h-full min-h-fit flex flex-col justify-center w-full md:w-3/4"
+            className="md:h-full min-h-fit flex flex-col justify-center w-full"
           >
             <label htmlFor="user_name" className="font-semibold text-xs mb-2">
               Your Name
