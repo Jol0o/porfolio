@@ -4,11 +4,9 @@ import React, { useRef } from "react";
 const cardVariants = {
   offscreen: {
     opacity: 0,
-    x: -100,
   },
   onscreen: {
     opacity: 1,
-    y: 0,
     transition: {
       delay: 0.4,
       duration: 0.9,
@@ -26,11 +24,9 @@ const cardVariants = {
 const textVariants = {
   offscreen: {
     opacity: 0,
-    x: -100,
   },
   onscreen: {
     opacity: 1,
-    y: 0,
     transition: {
       delay: 0.3,
       duration: 0.7,
