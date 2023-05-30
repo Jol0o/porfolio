@@ -85,7 +85,7 @@ export default function Timeline() {
         </Card>
         <ul>
           <TimelineCard>
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start justify-start">
               <li className="relative flex flex-col items-center md:flex-row md:items-baseline gap-6 pb-5">
                 <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
                   <svg
