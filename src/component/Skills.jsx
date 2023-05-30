@@ -5,7 +5,7 @@ export default function Skills() {
   const ref = useRef(null);
   const { inView, entry } = useInView({
     triggerOnce: true,
-    threshold: 0.2, // Adjust this threshold as needed
+    threshold: 0.1, // Adjusted threshold value
   });
 
   const variants = {
