@@ -5,9 +5,35 @@ const cardVariants = {
   offscreen: {
     opacity: 0,
     scale: 0.5,
+    y: -100,
   },
   onscreen: {
     opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: 0.5,
+      duration: 0.9,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 7,
+        stiffness: 100,
+        restDelta: 0.001,
+      },
+    },
+  },
+};
+
+const lowcardVariants = {
+  offscreen: {
+    opacity: 0,
+    scale: 0.5,
+    y: 100,
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
     scale: 1,
     transition: {
       delay: 0.5,
@@ -36,6 +62,19 @@ function Card({ children }) {
   );
 }
 
+function lowCard({ children }) {
+  return (
+    <motion.div
+      className="card-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <motion.div variants={lowcardVariants}>{children}</motion.div>
+    </motion.div>
+  );
+}
+
 export default function Skills() {
   const skills = [
     "/Skill/Github.png",
@@ -55,6 +94,8 @@ export default function Skills() {
             🧑‍💻 Skill & Experience
           </div>
         </div>
+      </Card>
+      <lowCard>
         <div className="flex items-center justify-center flex-col">
           <h1 className="my-4 font-bold text-center text-[40px] text-white">
             Technologies and skills
@@ -74,7 +115,7 @@ export default function Skills() {
             })}
           </div>
         </div>
-      </Card>
+      </lowCard>
     </div>
   );
 }
