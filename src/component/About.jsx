@@ -70,7 +70,7 @@ const ButtonVariants = {
 function Card({ children }) {
   return (
     <motion.div
-      className="card-container"
+      className="card-container w-full"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
@@ -96,7 +96,7 @@ function LowCard({ children }) {
 function ButtonCard({ children }) {
   return (
     <motion.div
-      className="card-container w-full"
+      className="card-container"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
@@ -124,7 +124,7 @@ const About = () => {
             </div>
           </Card>
 
-          <div className="w-full sm:w-1/2 h-fit flex justify-center items-center flex-col px-[3%] py-[2%]">
+          <div className="w-full md:w-1/2 h-fit flex justify-center items-center flex-col px-[3%] py-[2%]">
             <LowCard>
               <div className="flex flex-col gap-3">
                 <p className="w-auto  tracking-wide md:text-sm leading-10 ">
