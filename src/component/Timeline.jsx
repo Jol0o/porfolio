@@ -98,13 +98,11 @@ export default function Timeline() {
                 </svg>
               </div>
               <div>
-                <h1 className="font-semibold text-md text-white text-center md:text-left">
+                <h1 className="font-semibold text-md text-white  md:text-left">
                   HTML & CSS
                 </h1>
-                <p className="text-sm text-gray-400 text-center md:text-left">
-                  12-8-2022
-                </p>
-                <p className="mt-2 text-gray-400 text-sm text-center md:text-left">
+                <p className="text-sm text-gray-400  md:text-left">12-8-2022</p>
+                <p className="mt-2 text-gray-400 text-sm  md:text-left">
                   HTML and CSS basics: Start by learning the fundamentals of
                   HTML and CSS, including syntax, semantics, and page structure.
                 </p>
