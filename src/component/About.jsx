@@ -115,7 +115,7 @@ const About = () => {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row justify-evenly items-center w-fit  mx-auto  rounded-xl">
           <Card>
-            <div className="w-full flex justify-center items-center sm:w-1/2 before:bg-white before:absolute before:content-none">
+            <div className="w-full flex justify-center items-center before:bg-white before:absolute before:content-none">
               <img
                 src="/me1.png"
                 alt="me"
