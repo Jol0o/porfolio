@@ -118,13 +118,14 @@ export default function Contact() {
             </p>
           </div>
         </TextCard>
-        <FormCard>
-          <form
-            ref={form}
-            id="contact-form"
-            onSubmit={sendEmail}
-            className="md:h-full min-h-fit flex flex-col justify-center w-full"
-          >
+
+        <form
+          ref={form}
+          id="contact-form"
+          onSubmit={sendEmail}
+          className="md:h-full min-h-fit flex flex-col justify-center w-full"
+        >
+          <FormCard>
             <label htmlFor="user_name" className="font-semibold text-xs mb-2">
               Your Name
             </label>
@@ -160,8 +161,8 @@ export default function Contact() {
             <button className="self-start h-10 w-28 bg-green-500 rounded-full shadow-md mt-3 shadow-green-500 font-bold text-lg">
               Send
             </button>
-          </form>
-        </FormCard>
+          </FormCard>
+        </form>
       </div>
     </div>
   );
