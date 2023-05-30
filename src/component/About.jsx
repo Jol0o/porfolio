@@ -109,7 +109,7 @@ function ButtonCard({ children }) {
 const About = () => {
   return (
     <div
-      className="snap-start text-white w-full min-h-[100vh] flex justify-center items-center flex-col font-mono mb-[3%]"
+      className="snap-start text-white w-full min-h-[100vh] my-5 flex justify-center items-center flex-col font-mono mb-[3%]"
       id="about"
     >
       <div className="max-w-[1200px] mx-auto">
