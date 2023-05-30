@@ -96,7 +96,7 @@ function LowCard({ children }) {
 function ButtonCard({ children }) {
   return (
     <motion.div
-      className="card-container"
+      className="card-container w-full"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
