@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const imgVariants = {
   offscreen: {
     opacity: 0,
-    x: -100,
+    x: 100,
   },
   onscreen: {
     opacity: 1,
@@ -26,11 +26,11 @@ const imgVariants = {
 const textVariants = {
   offscreen: {
     opacity: 0,
-    y: 100,
+    x: -100,
   },
   onscreen: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       delay: 0.5,
       duration: 0.8,
