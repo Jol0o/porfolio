@@ -86,7 +86,7 @@ const Projects = () => {
 
   return (
     <div
-      className="min-h-[60vh] snap-start w-full text-white flex justify-center items-center my-16"
+      className="min-h-[60vh] w-full text-white flex justify-center items-center my-16"
       id="project"
     >
       <motion.div
@@ -96,7 +96,7 @@ const Projects = () => {
         transition={{ staggerChildren: 0.5 }}
         className="flex flex-col container m-auto"
       >
-        <div className="flex flex-col items-center justify-center mx-[2%]">
+        <div className="flex flex-col items-center justify-center md:mx-[2%]">
           <motion.h1
             variants={textVariants}
             className="text-3xl md:text-5xl font-bold text-green-500 pb-2"
