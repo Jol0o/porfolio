@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 const imgVariants = {
   offscreen: {
     opacity: 0,
-    x: 100,
+    y: 100,
   },
   onscreen: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       delay: 0.5,
       duration: 0.8,
@@ -26,11 +26,11 @@ const imgVariants = {
 const textVariants = {
   offscreen: {
     opacity: 0,
-    x: -100,
+    y: -100,
   },
   onscreen: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       delay: 0.5,
       duration: 0.8,
@@ -47,10 +47,12 @@ const textVariants = {
 
 const ButtonVariants = {
   offscreen: {
+    scale: 0.5,
     opacity: 0,
   },
   onscreen: {
     opacity: 1,
+    scale: 1,
     transition: {
       delay: 0.5,
       duration: 0.8,
@@ -107,7 +109,7 @@ function ButtonCard({ children }) {
 const About = () => {
   return (
     <div
-      className="snap-start text-white w-full min-h-[70vh] flex justify-center items-center flex-col font-mono mb-[3%]"
+      className="snap-start text-white w-full min-h-[90vh] md:min-h-[70vh] flex justify-center items-center flex-col font-mono mb-[3%]"
       id="about"
     >
       <div className="max-w-[1200px] mx-auto">
