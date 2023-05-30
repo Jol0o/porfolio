@@ -224,7 +224,6 @@ export default function Timeline() {
               </p>
             </div>
           </motion.li>
-          {/* Add the remaining list items */}
         </ul>
       </div>
     </motion.section>

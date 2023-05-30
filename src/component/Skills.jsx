@@ -1,5 +1,4 @@
 import { motion, useInView } from "framer-motion";
-import React from "react";
 import { useRef } from "react";
 
 export default function Skills() {
@@ -13,6 +12,7 @@ export default function Skills() {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
+
   const skills = [
     "/Skill/Github.png",
     "/Skill/Group 1.png",
