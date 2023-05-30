@@ -51,7 +51,7 @@ const FormVariants = {
 function FormCard({ children }) {
   return (
     <motion.div
-      className="card-container"
+      className="card-container w-full"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
@@ -136,7 +136,6 @@ export default function Contact() {
               placeholder="Enter your name"
               required
             />
-
             <label htmlFor="user_email" className="font-semibold text-xs mb-2">
               Your Email
             </label>
