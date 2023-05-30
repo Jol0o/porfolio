@@ -85,34 +85,31 @@ export default function Timeline() {
         </Card>
         <ul>
           <TimelineCard>
-            <div className="flex flex-col items-start justify-start">
-              <li className="relative flex flex-col items-center md:flex-row md:items-baseline gap-6 pb-5">
-                <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    className="bi bi-circle-fill fill-green-500"
-                    viewBox="0 0 16 16"
-                  >
-                    <circle cx="8" cy="8" r="8" />
-                  </svg>
-                </div>
-                <div>
-                  <h1 className="font-semibold text-md text-white text-center md:text-left">
-                    HTML & CSS
-                  </h1>
-                  <p className="text-sm text-gray-400 text-center md:text-left">
-                    12-8-2022
-                  </p>
-                  <p className="mt-2 text-gray-400 text-sm text-center md:text-left">
-                    HTML and CSS basics: Start by learning the fundamentals of
-                    HTML and CSS, including syntax, semantics, and page
-                    structure.
-                  </p>
-                </div>
-              </li>
-            </div>
+            <li className="relative flex flex-col  md:flex-row md:items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white text-center md:text-left">
+                  HTML & CSS
+                </h1>
+                <p className="text-sm text-gray-400 text-center md:text-left">
+                  12-8-2022
+                </p>
+                <p className="mt-2 text-gray-400 text-sm text-center md:text-left">
+                  HTML and CSS basics: Start by learning the fundamentals of
+                  HTML and CSS, including syntax, semantics, and page structure.
+                </p>
+              </div>
+            </li>
           </TimelineCard>
           <TimelineCard>
             <li className="relative flex items-baseline gap-6 pb-5">
