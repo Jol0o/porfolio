@@ -85,10 +85,7 @@ export default function Timeline() {
         </Card>
         <ul>
           <TimelineCard>
-            <li
-              variants={timelineVariants}
-              className="relative flex flex-col items-center md:flex-row md:items-baseline gap-6 pb-5"
-            >
+            <li className="relative flex flex-col items-center md:flex-row md:items-baseline gap-6 pb-5">
               <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +97,7 @@ export default function Timeline() {
                   <circle cx="8" cy="8" r="8" />
                 </svg>
               </div>
-              <div variants={timelineVariants}>
+              <div>
                 <h1 className="font-semibold text-md text-white text-center md:text-left">
                   HTML & CSS
                 </h1>
@@ -113,12 +110,9 @@ export default function Timeline() {
                 </p>
               </div>
             </li>
-          </TimelineCard>{" "}
+          </TimelineCard>
           <TimelineCard>
-            <li
-              variants={timelineVariants}
-              className="relative flex items-baseline gap-6 pb-5"
-            >
+            <li className="relative flex items-baseline gap-6 pb-5">
               <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -143,10 +137,7 @@ export default function Timeline() {
             </li>
           </TimelineCard>
           <TimelineCard>
-            <li
-              variants={timelineVariants}
-              className="relative flex items-baseline gap-6 pb-5"
-            >
+            <li className="relative flex items-baseline gap-6 pb-5">
               <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -171,10 +162,7 @@ export default function Timeline() {
             </li>
           </TimelineCard>
           <TimelineCard>
-            <li
-              variants={timelineVariants}
-              className="relative flex items-baseline gap-6 pb-5"
-            >
+            <li className="relative flex items-baseline gap-6 pb-5">
               <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -199,10 +187,7 @@ export default function Timeline() {
             </li>
           </TimelineCard>
           <TimelineCard>
-            <li
-              variants={timelineVariants}
-              className="relative flex items-baseline gap-6 pb-5"
-            >
+            <li className="relative flex items-baseline gap-6 pb-5">
               <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -229,10 +214,7 @@ export default function Timeline() {
             </li>
           </TimelineCard>
           <TimelineCard>
-            <li
-              variants={timelineVariants}
-              className="relative flex items-baseline gap-6 pb-5"
-            >
+            <li className="relative flex items-baseline gap-6 pb-5">
               <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
