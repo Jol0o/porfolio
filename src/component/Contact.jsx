@@ -56,7 +56,9 @@ function FormCard({ children }) {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
     >
-      <motion.div variants={FormVariants}>{children}</motion.div>
+      <motion.div className="w-full" variants={FormVariants}>
+        {children}
+      </motion.div>
     </motion.div>
   );
 }
