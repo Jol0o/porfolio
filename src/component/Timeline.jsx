@@ -27,12 +27,10 @@ const timelineVariants = {
   offscreen: {
     opacity: 0,
     scale: 0.5,
-    x: 100,
   },
   onscreen: {
     opacity: 1,
     scale: 1,
-    x: 0,
     transition: {
       delay: 0.5,
       duration: 0.9,
@@ -51,7 +49,7 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="flex min-h-screen items-center justify-center pt-20"
+      className="flex min-h-screen w-full items-center justify-center pt-20"
     >
       <motion.div
         initial="offscreen"
