@@ -17,7 +17,7 @@ const cardVariants = {
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
-        damping: 6,
+        damping: 8,
         stiffness: 100,
         restDelta: 0.001,
       },
@@ -32,12 +32,12 @@ const textVariants = {
   onscreen: {
     opacity: 1,
     transition: {
-      delay: 0.3,
+      delay: 0.5,
       duration: 0.7,
       ease: [0, 0.71, 0.2, 1.01],
       scale: {
         type: "spring",
-        damping: 7,
+        damping: 8,
         stiffness: 100,
         restDelta: 0.001,
       },
@@ -118,7 +118,7 @@ const Projects = () => {
       <div className="flex flex-col container m-auto">
         <div className="flex flex-col items-center justify-center md:mx-[2%]">
           <TextCard>
-            <h1 className="text-3xl md:text-5xl font-bold text-green-500 pb-2">
+            <h1 className="text-3xl md:text-5xl font-bold text-center text-green-500 pb-2">
               Selected Projects
             </h1>
             <p className="fonr-medium text-center text-xs md:text-sm mt-2 text-gray-500">
