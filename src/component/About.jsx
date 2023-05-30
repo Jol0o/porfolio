@@ -70,7 +70,7 @@ const ButtonVariants = {
 function Card({ children }) {
   return (
     <motion.div
-      className="card-container w-full"
+      className="card-container"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
@@ -119,7 +119,7 @@ const About = () => {
               <img
                 src="/me1.png"
                 alt="me"
-                className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[300px] sm:h-[400px] w-auto sm:w-[400px]"
+                className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[300px] sm:h-[400px] w-full sm:w-[400px]"
               />
             </div>
           </Card>
