@@ -62,7 +62,7 @@ function Card({ children }) {
   );
 }
 
-function lowCard({ children }) {
+function LowCard({ children }) {
   return (
     <motion.div
       className="card-container"
@@ -95,7 +95,7 @@ export default function Skills() {
           </div>
         </div>
       </Card>
-      <lowCard>
+      <LowCard>
         <div className="flex items-center justify-center flex-col">
           <h1 className="my-4 font-bold text-center text-[40px] text-white">
             Technologies and skills
@@ -115,7 +115,7 @@ export default function Skills() {
             })}
           </div>
         </div>
-      </lowCard>
+      </LowCard>
     </div>
   );
 }
