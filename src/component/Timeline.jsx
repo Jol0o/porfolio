@@ -244,11 +244,62 @@ export default function Timeline() {
                 </h1>
                 <p className="text-sm text-gray-400">March-2023</p>
                 <p className="mt-2 text-gray-400 text-sm">
-                  Next.js is a React framework for building server-side rendered
-                  applications. It offers features like automatic code
-                  splitting, optimized performance, and SEO-friendly rendering.
-                  It simplifies the development of robust web applications by
-                  leveraging React's power.
+                  Google Firebase is a non-SQL database I love using firebase
+                  because of its simplicity, flexibility and easy to implement
+                  in a project. And its authentication is so simple you can
+                  learn them in their docs.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">
+                  PHP and MySQL
+                </h1>
+                <p className="text-sm text-gray-400">March-2023</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  I learned basic PHP and MySQL because of our final project in
+                  school we are assign to make a blog app using PHP, JavaScript,
+                  MySQL and XAMP. I enjoyed using PHP because not unlike
+                  JavaScript the syntax is not that complicated to understand.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">REST API</h1>
+                <p className="text-sm text-gray-400">July-2023</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  In Nextjs we are allowed to make our own api to access the
+                  database because nextjs runs in server-side. I learned to make
+                  a CRUD app using REST API now I am planning to learn MonggoDB
+                  for the database.
                 </p>
               </div>
             </li>
