@@ -18,12 +18,6 @@ const cardVariants = {
       delay: 0.4,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 6,
-        stiffness: 100,
-        restDelta: 0.001,
-      },
     },
   },
 };
@@ -40,12 +34,6 @@ const textVariants = {
       delay: 0.4,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 6,
-        stiffness: 100,
-        restDelta: 0.001,
-      },
     },
   },
 };

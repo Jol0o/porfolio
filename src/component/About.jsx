@@ -13,12 +13,6 @@ const imgVariants = {
       delay: 0.5,
       duration: 0.8,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 7,
-        stiffness: 100,
-        restDelta: 0.001,
-      },
     },
   },
 };
@@ -35,12 +29,6 @@ const textVariants = {
       delay: 0.5,
       duration: 0.8,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 9,
-        stiffness: 100,
-        restDelta: 0.001,
-      },
     },
   },
 };
@@ -57,12 +45,6 @@ const ButtonVariants = {
       delay: 0.5,
       duration: 0.8,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 8,
-        stiffness: 100,
-        restDelta: 0.001,
-      },
     },
   },
 };

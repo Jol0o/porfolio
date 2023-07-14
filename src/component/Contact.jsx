@@ -16,11 +16,6 @@ const TextVariants = {
       delay: 0.5,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 10,
-        stiffness: 100,
-      },
     },
   },
 };
@@ -39,11 +34,6 @@ const FormVariants = {
       delay: 0.5,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 10,
-        stiffness: 100,
-      },
     },
   },
 };
