@@ -89,7 +89,7 @@ export default function Timeline() {
               </div>
               <div>
                 <h1 className="font-semibold text-md text-white">HTML & CSS</h1>
-                <p className="text-sm text-gray-400 ">12-8-2022</p>
+                <p className="text-sm text-gray-400 ">July-2022</p>
                 <p className="mt-2 text-gray-400 text-sm ">
                   HTML and CSS basics: Start by learning the fundamentals of
                   HTML and CSS, including syntax, semantics, and page structure.
@@ -114,7 +114,7 @@ export default function Timeline() {
                 <h1 className="font-semibold text-md text-white">
                   Responsive Design
                 </h1>
-                <p className="text-sm text-gray-400">28-8-2022</p>
+                <p className="text-sm text-gray-400">August-2022</p>
                 <p className="mt-2 text-gray-400 text-sm">
                   Learn how to create responsive layouts that adapt to different
                   screen sizes, using tools such as media queries and flexbox.
@@ -139,7 +139,7 @@ export default function Timeline() {
                 <h1 className="font-semibold text-md text-white">
                   JavaScript fundamentals
                 </h1>
-                <p className="text-sm text-gray-400">8-9-2022</p>
+                <p className="text-sm text-gray-400">September-2022</p>
                 <p className="mt-2 text-gray-400 text-sm">
                   Get familiar with the basics of JavaScript, including
                   variables, data types, functions, and control structures.
@@ -164,7 +164,7 @@ export default function Timeline() {
                 <h1 className="font-semibold text-md text-white">
                   DOM manipulation
                 </h1>
-                <p className="text-sm text-gray-400">27-9-2022</p>
+                <p className="text-sm text-gray-400">September-2022</p>
                 <p className="mt-2 text-gray-400 text-sm">
                   Learn how to manipulate the Document Object Model (DOM) using
                   JavaScript to create interactive web pages.
@@ -189,7 +189,7 @@ export default function Timeline() {
                 <h1 className="font-semibold text-md text-white">
                   JavaScript frameworks and libraries
                 </h1>
-                <p className="text-sm text-gray-400">9-10-2022</p>
+                <p className="text-sm text-gray-400">October-2022</p>
                 <p className="mt-2 text-gray-400 text-sm">
                   Once I have a good understanding of JavaScript, I can start
                   learning popular frameworks and libraries such as React. These
@@ -214,7 +214,35 @@ export default function Timeline() {
               </div>
               <div>
                 <h1 className="font-semibold text-md text-white">NextJs</h1>
-                <p className="text-sm text-gray-400">9-10-2022</p>
+                <p className="text-sm text-gray-400">January 2023</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  Next.js is a React framework for building server-side rendered
+                  applications. It offers features like automatic code
+                  splitting, optimized performance, and SEO-friendly rendering.
+                  It simplifies the development of robust web applications by
+                  leveraging React's power.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">
+                  Google Firebase
+                </h1>
+                <p className="text-sm text-gray-400">March-2023</p>
                 <p className="mt-2 text-gray-400 text-sm">
                   Next.js is a React framework for building server-side rendered
                   applications. It offers features like automatic code
