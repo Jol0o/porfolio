@@ -15,12 +15,6 @@ const cardVariants = {
       delay: 0.4,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 8,
-        stiffness: 100,
-        restDelta: 0.001,
-      },
     },
   },
 };
@@ -35,12 +29,6 @@ const textVariants = {
       delay: 0.5,
       duration: 0.7,
       ease: [0, 0.71, 0.2, 1.01],
-      scale: {
-        type: "spring",
-        damping: 8,
-        stiffness: 100,
-        restDelta: 0.001,
-      },
     },
   },
 };
@@ -106,7 +94,13 @@ const Projects = () => {
     {
       name: "Spotify.clone",
       img: "./project/spotify.jpeg",
-      tool: ["HTML ", "REACT.JS"],
+      tool: ["HTML", "REACT.JS"],
+    },
+    {
+      name: "Kick sole",
+      img: "./project/kicks.png",
+      tool: ["TAILWINF", "NEXT.JS"],
+      link: "https://ecommerce-nextjs-git-main-jol0o.vercel.app/?vercelToolbarCode=I9N8k6Ujw5xLJFq",
     },
   ];
 
