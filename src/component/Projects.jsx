@@ -99,8 +99,14 @@ const Projects = () => {
     {
       name: "Kick sole",
       img: "./project/kicks.png",
-      tool: ["TAILWINF", "NEXT.JS"],
+      tool: ["TAILWIND", "NEXT.JS"],
       link: "https://ecommerce-nextjs-git-main-jol0o.vercel.app/?vercelToolbarCode=I9N8k6Ujw5xLJFq",
+    },
+    {
+      name: "Ollies Pad",
+      img: "./project/ollie.png",
+      tool: ["WORDPRESS", "ELEMENTOR"],
+      link: "https://jolo.42web.io/",
     },
   ];
 
