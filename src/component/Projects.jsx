@@ -137,7 +137,7 @@ const Projects = () => {
                       <img
                         src={item.img}
                         alt="image"
-                        className="w-full min-h-[250px] rounded-xl hover:scale-[1.02] transition"
+                        className="w-full min-h-[200px] object-cover rounded-xl hover:scale-[1.02] transition"
                       />
 
                       <div className="flex justify-between items-center mt-2">
