@@ -65,7 +65,7 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="flex min-h-screen w-full items-center justify-center pt-20"
+      className="flex min-h-screen w-full items-center justify-center pt-20 px-2"
     >
       <div className="w-full container h-full md:max-w-md">
         <Card>
