@@ -108,6 +108,12 @@ const Projects = () => {
       tool: ["WORDPRESS", "ELEMENTOR"],
       link: "https://jolo.42web.io/",
     },
+    {
+      name: "Play Otaku",
+      img: "./project/ollie.png",
+      tool: ["NEXT JS", "SUPABASE"],
+      link: "play-otaku-ruddy.vercel.app/",
+    },
   ];
 
   return (
