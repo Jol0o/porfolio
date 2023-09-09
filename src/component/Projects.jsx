@@ -110,9 +110,9 @@ const Projects = () => {
     },
     {
       name: "Play Otaku",
-      img: "./project/ollie.png",
+      img: "./project/otaku.png",
       tool: ["NEXT JS", "SUPABASE"],
-      link: "play-otaku-ruddy.vercel.app/",
+      link: "https://play-otaku-ruddy.vercel.app/",
     },
   ];
 
