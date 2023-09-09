@@ -95,6 +95,7 @@ const Projects = () => {
       name: "Spotify.clone",
       img: "./project/spotify.jpeg",
       tool: ["HTML", "REACT.JS"],
+      link: "https://clonespotify0.netlify.app/",
     },
     {
       name: "Kick sole",
