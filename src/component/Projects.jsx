@@ -115,6 +115,12 @@ const Projects = () => {
       tool: ["NEXT JS", "SUPABASE"],
       link: "https://play-otaku-ruddy.vercel.app/",
     },
+    {
+      name: "Cafe Urban",
+      img: "./project/coffee",
+      tool: ["NEXT JS", "BOOTSTRAP"],
+      link: "https://cafeurban.vercel.app/",
+    },
   ];
 
   return (
