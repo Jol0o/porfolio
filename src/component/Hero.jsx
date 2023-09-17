@@ -103,7 +103,7 @@ const Hero = () => {
             <AiFillGithub />
           </a>
         </li>
-        <li className="ml-[-80px] hover:ml-[10px]  ease-out duration-300 hover:text-white ">
+        <li className="ml-[-109px] hover:ml-[10px]  ease-out duration-300 hover:text-white ">
           <a
             href="https://www.linkedin.com/in/john-loyd-belen-180329250/"
             target="_blank"
