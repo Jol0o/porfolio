@@ -134,7 +134,7 @@ const About = () => {
                     <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                   </span>
                 </div>
-                <a href="/public/JohnloydBelen.pdf" download>
+                <a href="/public/Resume-John-Loyd-Belen.pdf" download>
                   Download CV
                 </a>
               </button>
