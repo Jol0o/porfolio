@@ -2,7 +2,7 @@ import { motion, Variants } from "framer-motion";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
-import { BsArrowDown } from "react-icons/bs";
+import { BsArrowDown, BsLinkedin } from "react-icons/bs";
 
 const cardVariants = {
   offscreen: {
@@ -101,6 +101,16 @@ const Hero = () => {
           >
             <h1> Github</h1>
             <AiFillGithub />
+          </a>
+        </li>
+        <li className="ml-[-80px] hover:ml-[10px]  ease-out duration-300 hover:text-white ">
+          <a
+            href="https://www.linkedin.com/in/john-loyd-belen-180329250/"
+            target="_blank"
+            className="flex gap-2 items-center "
+          >
+            <h1> Linkedin</h1>
+            <BsLinkedin />
           </a>
         </li>
       </ul>
