@@ -8,11 +8,9 @@ const cardVariants = {
   offscreen: {
     opacity: 0,
     scale: 0.5,
-    x: 100,
   },
   onscreen: {
     opacity: 1,
-    x: 0,
     scale: 1,
     transition: {
       delay: 0.1,
