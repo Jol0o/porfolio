@@ -10,7 +10,7 @@ const headVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 0.3,
+      delay: 0.1,
       duration: 0.7,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -28,7 +28,7 @@ const timelineVariants = {
     scale: 1,
     x: 0,
     transition: {
-      delay: 0.5,
+      delay: 0.1,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -65,8 +65,9 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="flex min-h-screen w-full items-center justify-center pt-20 px-2 mb-5 md:mb-0"
+      className="flex min-h-screen w-full items-center justify-center pt-20 px-2 mb-5 md:mb-0 relative"
     >
+      <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[30%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[400px]"></div>
       <div className="w-full container h-full md:max-w-md">
         <Card>
           <h2 className="text-[30px] font-semibold text-gray-300 mb-7 text-center">

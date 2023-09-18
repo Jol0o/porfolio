@@ -12,7 +12,7 @@ import { AnimatePresence } from "framer-motion";
 const App = () => {
   return (
     <AnimatePresence>
-      <div className="bg-[#090E16] w-full overflow-hidden px-2">
+      <div className="bg-[#090E16] w-full overflow-hidden ">
         <Nav />
         <Hero />
         <Projects />

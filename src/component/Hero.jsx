@@ -1,4 +1,4 @@
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
@@ -15,7 +15,7 @@ const cardVariants = {
     x: 0,
     scale: 1,
     transition: {
-      delay: 0.4,
+      delay: 0.1,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -121,6 +121,7 @@ const Hero = () => {
         transition={{ staggerChildren: 0.5 }}
         className="relative bg-opacity-75 bg-[#090E16] flex justify-center items-center pt-24 md:pt-0 h-full w-full flex-col "
       >
+        <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[45%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[200px]"></div>
         <div className="absolute w-auto top-[23%] flex justify-center items-center">
           <motion.h2
             variants={cardVariants}
@@ -148,7 +149,7 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      <div className="z-0 animate-bounce absolute left-1/2 transform -translate-x-1/2 top-[90%] rounded-full hover:bg-green-400 transition bg-[#3F8E00] py-3 px-3">
+      <div className="z-1 animate-bounce absolute left-[50%] translate-x-[-50%] translate-y-[-50%] top-[90%] rounded-full hover:bg-green-400 transition bg-[#3F8E00] py-3 px-3">
         <button onClick={scrollToContent}>
           <BsArrowDown />
         </button>

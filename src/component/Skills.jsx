@@ -96,6 +96,7 @@ export default function Skills() {
             {skills.map((img) => {
               return (
                 <img
+                  key={img}
                   src={img}
                   alt="img"
                   className="h-10  hover:scale-125 transition "

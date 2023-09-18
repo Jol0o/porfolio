@@ -13,7 +13,7 @@ const TextVariants = {
     scale: 1,
     x: 0,
     transition: {
-      delay: 0.5,
+      delay: 0.1,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -31,7 +31,7 @@ const FormVariants = {
     scale: 1,
     x: 0,
     transition: {
-      delay: 0.5,
+      delay: 0.1,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -89,11 +89,12 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="w-full min-h-screen flex justify-center items-center "
+      className="w-full min-h-screen flex justify-center items-center relative"
     >
-      <div className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-0 sm:p-10">
+      <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[45%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[400px] z-1"></div>
+      <div className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-0 sm:p-10 relative z-10">
         <TextCard>
-          <div className="md:h-full md:w-full flex flex-col w-full">
+          <div className="md:h-full md:w-full flex flex-col w-full ">
             <h1 className="text-3xl md:text-5xl font-bold text-green-500 mb-2">
               Get in touch
             </h1>

@@ -42,7 +42,7 @@ const ButtonVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 0.5,
+      delay: 0.1,
       duration: 0.8,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -91,10 +91,12 @@ function ButtonCard({ children }) {
 const About = () => {
   return (
     <div
-      className="snap-start text-white w-full min-h-[100vh] my-5 flex justify-center items-center flex-col font-mono mb-[3%]"
+      className="snap-start text-white w-full min-h-[100vh] my-5 flex justify-center items-center flex-col font-mono mb-[3%] relative"
       id="about"
     >
-      <div className="max-w-[1200px] mx-auto">
+      <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[10%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[350px]"></div>
+      <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[90%] left-[0] translate-x-[-50%] translate-y-[-50%] blur-[350px]"></div>
+      <div className="max-w-[1200px] mx-auto z-10">
         <div className="flex flex-col md:flex-row justify-evenly items-center w-fit  mx-auto  rounded-xl">
           <Card>
             <div className="w-full flex justify-center items-center before:bg-white before:absolute before:content-none">
@@ -130,8 +132,8 @@ const About = () => {
               <button className="border border-green-500 text-green-500 bg-transparent h-10 w-36 relative rounded-md mt-5">
                 <div className="absolute bottom-8 left-[135px]">
                   <span className="relative flex h-3 w-3">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                   </span>
                 </div>
                 <a

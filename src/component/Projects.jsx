@@ -1,4 +1,4 @@
-import { motion, useInView, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useRef } from "react";
 
 const cardVariants = {
@@ -12,7 +12,7 @@ const cardVariants = {
     x: 0,
     scale: 1,
     transition: {
-      delay: 0.4,
+      delay: 0.1,
       duration: 0.9,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -26,7 +26,7 @@ const textVariants = {
   onscreen: {
     opacity: 1,
     transition: {
-      delay: 0.5,
+      delay: 0.1,
       duration: 0.7,
       ease: [0, 0.71, 0.2, 1.01],
     },
@@ -131,7 +131,7 @@ const Projects = () => {
 
   return (
     <div
-      className="min-h-[60vh] w-full text-white flex justify-center items-center my-16"
+      className="min-h-[60vh] w-full text-white flex justify-center items-center my-16 "
       id="project"
     >
       <div className="flex flex-col container m-auto">
@@ -148,9 +148,9 @@ const Projects = () => {
         </div>
         <div className="max-w-[1400px] flex items-center justify-center mx-auto my-5">
           <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
-            {info.map((item) => {
+            {info.map((item, index) => {
               return (
-                <Card>
+                <Card key={index}>
                   <a href={item.link} target="_blank">
                     <div className="w-[270px] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
                       <img
@@ -166,7 +166,10 @@ const Projects = () => {
                         <div className="flex gap-2">
                           {item.tool.map((tool) => {
                             return (
-                              <h1 className="text-[10px] font-semibold bg-green-800 rounded-lg p-1">
+                              <h1
+                                key={tool}
+                                className="text-[10px] font-semibold bg-green-800 rounded-lg p-1"
+                              >
                                 {tool}
                               </h1>
                             );
