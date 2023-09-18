@@ -67,7 +67,7 @@ export default function Timeline() {
       id="timeline"
       className="flex min-h-screen w-full items-center justify-center pt-20 px-2 mb-5 md:mb-0 relative"
     >
-      <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[30%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[400px]"></div>
+      <div className="w-[100px] md:w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[30%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[150px] md:blur-[400px]"></div>
       <div className="w-full container h-full md:max-w-md">
         <Card>
           <h2 className="text-[30px] font-semibold text-gray-300 mb-7 text-center">

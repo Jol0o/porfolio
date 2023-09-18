@@ -91,7 +91,7 @@ export default function Contact() {
       id="contact"
       className="w-full min-h-screen flex justify-center items-center relative"
     >
-      <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[45%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[400px] z-1"></div>
+      <div className="w-[200px]  md:w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[45%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px] z-1"></div>
       <div className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-0 sm:p-10 relative z-10">
         <TextCard>
           <div className="md:h-full md:w-full flex flex-col w-full ">

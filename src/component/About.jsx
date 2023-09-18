@@ -94,8 +94,8 @@ const About = () => {
       className="snap-start text-white w-full min-h-[100vh] my-5 flex justify-center items-center flex-col font-mono mb-[3%] relative"
       id="about"
     >
-      <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[10%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[350px]"></div>
-      <div className="w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[90%] left-[0] translate-x-[-50%] translate-y-[-50%] blur-[350px]"></div>
+      <div className="w-[100px] md:w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[10%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px]"></div>
+      <div className="w-[100px] md:w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[90%] left-[0] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px]"></div>
       <div className="max-w-[1200px] mx-auto z-10">
         <div className="flex flex-col md:flex-row justify-evenly items-center w-fit  mx-auto  rounded-xl">
           <Card>
