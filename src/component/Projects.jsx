@@ -121,12 +121,6 @@ const Projects = () => {
       tool: ["NEXT JS", "BOOTSTRAP"],
       link: "https://cafeurban.vercel.app/",
     },
-    {
-      name: "Cafe Urban Dashboard",
-      img: "./project/dashboard.png",
-      tool: ["NEXT JS", "BOOTSTRAP"],
-      link: "https://cafedashboard.vercel.app/",
-    },
   ];
 
   return (

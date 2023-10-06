@@ -116,9 +116,9 @@ const About = () => {
                   Philippines.
                 </p>
                 <p>
-                  🚀 I'm skilled in HTML , CSS , BOOTSTAP , TAILWIND , REACT.JS
-                  , NEXT.JS , FIREBASE , and I'm always eager to learn more.
-                  Besides coding, I enjoy video games and designing.
+                  🚀 I'm skilled in HTML, CSS, BOOTSTAP, TAILWIND, REACT.JS,
+                  NEXT.JS, FIREBASE, and I'm always eager to learn more. Besides
+                  coding, I enjoy video games and designing.
                 </p>
                 <p>
                   💡 I value collaboration and teamwork and am open to working
