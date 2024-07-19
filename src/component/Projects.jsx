@@ -141,23 +141,23 @@ const Projects = () => {
           </TextCard>
         </div>
         <div className="max-w-[1400px] flex items-center justify-center mx-auto my-5">
-          <div className="w-full min-h-full flex flex-wrap items-center justify-center gap-10">
+          <div className="w-full min-h-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-2 md:gap-10">
             {info.map((item, index) => {
               return (
                 <Card key={index}>
                   <a href={item.link} target="_blank">
-                    <div className="w-[270px] sm:w-[300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
+                    <div className="w-[200px,100%,300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
                       <img
                         src={item.img}
                         alt="image"
-                        className="w-full min-h-[170px] object-cover rounded-xl hover:scale-[1.02] transition"
+                        className="w-full min-h-[100px] object-cover rounded-xl hover:scale-[1.02] transition"
                       />
 
-                      <div className="flex justify-between items-center mt-2">
+                      <div className="flex justify-between md:flex-row flex-col items-center mt-2">
                         <div>
                           <h1 className="font-semibold text-sm">{item.name}</h1>
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex  gap-2">
                           {item.tool.map((tool) => {
                             return (
                               <h1

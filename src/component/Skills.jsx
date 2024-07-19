@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import React from "react";
+import { AnimatedIcons } from './AnimatedIcons';
 
 const cardVariants = {
   offscreen: {
@@ -75,7 +76,7 @@ export default function Skills() {
     "/Skill/Vector.png",
   ];
   return (
-    <div className="w-full min-h-[50vh] flex flex-col items-center justify-center mt-[3%]">
+    <div className="w-full min-h-[50vh] flex flex-col items-center justify-center mt-20">
       <Card>
         <div className="flex items-center justify-center">
           <div className="text-green-400 self-center font-bold bg-green-900 w-fit rounded-lg px-2">
@@ -93,16 +94,7 @@ export default function Skills() {
         </p>
         <LowCard>
           <div className="flex gap-10 justify-center items-center px-[3%] flex-wrap">
-            {skills.map((img) => {
-              return (
-                <img
-                  key={img}
-                  src={img}
-                  alt="img"
-                  className="h-10  hover:scale-125 transition "
-                />
-              );
-            })}
+            <AnimatedIcons />
           </div>
         </LowCard>
       </div>

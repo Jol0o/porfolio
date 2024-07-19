@@ -3,6 +3,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowDown, BsLinkedin } from "react-icons/bs";
+import Globe from './../components/magicui/globe';
 
 const cardVariants = {
   offscreen: {
@@ -145,6 +146,7 @@ const Hero = () => {
             </button>
           </motion.div>
         </div>
+        {/* <Globe className="w-[1000px] z-0" /> */}
       </motion.div>
 
       <div className="z-1 animate-bounce absolute left-[50%] translate-x-[-50%] translate-y-[-50%] top-[90%] rounded-full hover:bg-green-400 transition bg-[#3F8E00] py-3 px-3">

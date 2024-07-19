@@ -65,7 +65,7 @@ export default function Timeline() {
   return (
     <section
       id="timeline"
-      className="flex min-h-screen w-full items-center justify-center pt-20 px-2 mb-5 md:mb-0 relative"
+      className="flex min-h-screen w-full items-center justify-center pt-20 px-2 mb-10 md:mb-0 relative"
     >
       <div className="w-[100px] md:w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[30%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[150px] md:blur-[400px]"></div>
       <div className="w-full container h-full md:max-w-md">
@@ -305,6 +305,155 @@ export default function Timeline() {
               </div>
             </li>
           </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">React Native</h1>
+                <p className="text-sm text-gray-400">September-2023</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  React Native in my first job we used react native to develop and maintain a mobile application called Posh Sidekick.
+                  I learned a lot about React Native from developing to deployment and working with React Native was a great experience.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">Nextjs TypeScript</h1>
+                <p className="text-sm text-gray-400">January-2024</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  I learned TypeScript because of Nextjs. TypeScript is a
+                  statically typed superset of JavaScript that compiles to plain
+                  JavaScript. It offers optional static type checking, which can
+                  help catch errors early in the development process.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">Basic Laravel</h1>
+                <p className="text-sm text-gray-400">March-2024</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  Laravel is a PHP framework that provides a simple, elegant
+                  syntax for web development. I learned the basics of Laravel to
+                  create web applications more efficiently and securely.
+                  I also develop a simple booking system for a hotel using Laravel for RESTAPI.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">Progresive Web Application</h1>
+                <p className="text-sm text-gray-400">April-2024</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  I learned how to create Progressive Web Applications (PWAs) to
+                  provide a better user experience on the web. PWAs are web
+                  applications that use modern web technologies to provide a
+                  native app-like experience to users.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">JSON Web Tokens (JWT)</h1>
+                <p className="text-sm text-gray-400">May-2024</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  I learned how to use JSON Web Tokens (JWT) to secure web
+                  applications by generating and verifying tokens. JWTs are a
+                  popular method for authentication and authorization in web
+                  applications.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">Node.js/Express.js</h1>
+                <p className="text-sm text-gray-400">April-2024</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  Node.js is a JavaScript runtime built on Chrome's V8 JavaScript
+                  engine. Express.js is a web application framework for Node.js.
+                  I learned how to use Node.js and Express.js to build
+                  server-side applications and APIs.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+
         </ul>
       </div>
     </section>

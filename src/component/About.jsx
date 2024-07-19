@@ -103,7 +103,7 @@ const About = () => {
               <img
                 src="/me1.png"
                 alt="me"
-                className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] h-[300px] sm:h-[400px] w-full sm:w-[400px]"
+                className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] w-[clamp(200px,100%,300px)] h-[clamp(200px,100%,300px)]"
               />
             </div>
           </Card>
@@ -117,12 +117,12 @@ const About = () => {
                 </p>
                 <p>
                   🚀 I'm skilled in HTML, CSS, BOOTSTAP, TAILWIND, REACT.JS,
-                  NEXT.JS, FIREBASE, and I'm always eager to learn more. Besides
-                  coding, I enjoy video games and designing.
+                  NEXT.JS, FIREBASE, TYPESCRIPT, NODEJS and I'm always eager to learn more. Besides
+                  coding, I enjoy video games and developing usefull website.
                 </p>
                 <p>
                   💡 I value collaboration and teamwork and am open to working
-                  together. If you have any questions or would like to work with
+                  together and I enjoy problem solving. If you have any questions or would like to work with
                   me, please reach out.
                 </p>
               </div>
@@ -137,8 +137,9 @@ const About = () => {
                   </span>
                 </div>
                 <a
-                  href="/public/Resume-John-Loyd-Belen.pdf"
+                  href="https://drive.google.com/file/d/1UDrE6kni2MaL3rjTmRJtrdrhObPvbpfl/view?usp=sharing"
                   download="Resume-John-Loyd-Belen.pdf"
+                  target="_blank"
                 >
                   Download CV
                 </a>
