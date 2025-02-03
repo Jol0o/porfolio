@@ -137,7 +137,7 @@ const About = () => {
                   </span>
                 </div>
                 <a
-                  href="https://drive.google.com/file/d/1UDrE6kni2MaL3rjTmRJtrdrhObPvbpfl/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1R1EOmb07nkAWxLNnJDoU68pf5yRDwyet/view?usp=drive_link"
                   download="Resume-John-Loyd-Belen.pdf"
                   target="_blank"
                 >

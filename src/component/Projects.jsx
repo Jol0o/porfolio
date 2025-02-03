@@ -68,6 +68,12 @@ const Projects = () => {
       link: "https://food-hubs.netlify.app",
     },
     {
+      name: "Cafe Urban",
+      img: "./project/coffee.png",
+      tool: ["NEXT JS", "BOOTSTRAP"],
+      link: "https://cafeurban.vercel.app/",
+    },
+    {
       name: "Todo",
       img: "./project/todo.png",
       tool: ["FIREBASE", "REACT"],
@@ -116,10 +122,16 @@ const Projects = () => {
       link: "https://play-otaku-ruddy.vercel.app/",
     },
     {
-      name: "Cafe Urban",
-      img: "./project/coffee.png",
-      tool: ["NEXT JS", "BOOTSTRAP"],
-      link: "https://cafeurban.vercel.app/",
+      name: "Gasbee",
+      img: "./project/gasbee.png",
+      tool: ["NEXT JS", "NODE/EXPRESS"],
+      link: "https://gasbee.aap-h.com/",
+    },
+    {
+      name: "Remimic",
+      img: "./project/remimic.png",
+      tool: ["MERN"],
+      link: "https://remimic.com/",
     },
   ];
 
