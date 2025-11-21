@@ -61,78 +61,96 @@ function Card({ children }) {
 
 const Projects = () => {
   const info = [
+    // {
+    //   name: "Food",
+    //   img: "./project/Food.jpeg",
+    //   tool: ["HTML", "CSS"],
+    //   link: "https://food-hubs.netlify.app",
+    // },
+    // {
+    //   name: "Cafe Urban",
+    //   img: "./project/coffee.png",
+    //   tool: ["NEXT JS", "BOOTSTRAP"],
+    //   link: "https://cafeurban.vercel.app/",
+    // },
+    // {
+    //   name: "Todo",
+    //   img: "./project/todo.png",
+    //   tool: ["FIREBASE", "REACT"],
+    //   link: "https://nexttodoapp.netlify.app/",
+    // },
+    // {
+    //   name: "K's",
+    //   img: "./project/k.jpeg",
+    //   tool: ["HTML ", " JS"],
+    //   link: "https://kproject.netlify.app",
+    // },
+    // {
+    //   name: "KFC",
+    //   img: "./project/kfc.png",
+    //   tool: ["HTML", "REACTJS"],
+    //   link: "https://kfc-cloner.netlify.app/",
+    // },
+    // {
+    //   name: "NetMovies.clone",
+    //   img: "./project/netflix.jpeg",
+    //   tool: ["TAILWIND ", " REACT.js"],
+    //   link: "https://netmov.netlify.app",
+    // },
+    // {
+    //   name: "Spotify.clone",
+    //   img: "./project/spotify.jpeg",
+    //   tool: ["HTML", "REACT.JS"],
+    //   link: "https://clonespotify0.netlify.app/",
+    // },
+    // {
+    //   name: "Kick sole",
+    //   img: "./project/kicks.png",
+    //   tool: ["TAILWIND", "NEXT.JS"],
+    //   link: "https://ecommerce-nextjs-git-main-jol0o.vercel.app/?vercelToolbarCode=I9N8k6Ujw5xLJFq",
+    // },
+    // {
+    //   name: "Ollies Pad",
+    //   img: "./project/ollie.png",
+    //   tool: ["WORDPRESS", "ELEMENTOR"],
+    //   link: "https://jolo.42web.io/",
+    // },
+    // {
+    //   name: "Play Otaku",
+    //   img: "./project/otaku.png",
+    //   tool: ["NEXT JS", "SUPABASE"],
+    //   link: "https://play-otaku-ruddy.vercel.app/",
+    // },
+    // {
+    //   name: "Gasbee",
+    //   img: "./project/gasbee.png",
+    //   tool: ["NEXT JS", "NODE/EXPRESS"],
+    //   link: "https://gasbee.aap-h.com/",
+    // },
+    // {
+    //   name: "Remimic",
+    //   img: "./project/remimic.png",
+    //   tool: ["MERN"],
+    //   link: "https://remimic.com/",
+    // },
     {
-      name: "Food",
-      img: "./project/Food.jpeg",
-      tool: ["HTML", "CSS"],
-      link: "https://food-hubs.netlify.app",
+      name: "Callexa: Voice Automation Ai",
+      img: "./project/callexa.png",
+      tool: ["NextJs", "Express", "Twilio"],
+      link: "https://callexa-page-nw6i.vercel.app/",
     },
     {
-      name: "Cafe Urban",
-      img: "./project/coffee.png",
-      tool: ["NEXT JS", "BOOTSTRAP"],
-      link: "https://cafeurban.vercel.app/",
+      name: "ServeBeez",
+      img: "./project/servebeez.png",
+      tool: ["Monorepo", "Supabase", "T3 Stack"],
+      link: "https://servebeez.com/",
     },
     {
-      name: "Todo",
-      img: "./project/todo.png",
-      tool: ["FIREBASE", "REACT"],
-      link: "https://nexttodoapp.netlify.app/",
-    },
-    {
-      name: "K's",
-      img: "./project/k.jpeg",
-      tool: ["HTML ", " JS"],
-      link: "https://kproject.netlify.app",
-    },
-    {
-      name: "KFC",
-      img: "./project/kfc.png",
-      tool: ["HTML", "REACTJS"],
-      link: "https://kfc-cloner.netlify.app/",
-    },
-    {
-      name: "NetMovies.clone",
-      img: "./project/netflix.jpeg",
-      tool: ["TAILWIND ", " REACT.js"],
-      link: "https://netmov.netlify.app",
-    },
-    {
-      name: "Spotify.clone",
-      img: "./project/spotify.jpeg",
-      tool: ["HTML", "REACT.JS"],
-      link: "https://clonespotify0.netlify.app/",
-    },
-    {
-      name: "Kick sole",
-      img: "./project/kicks.png",
-      tool: ["TAILWIND", "NEXT.JS"],
-      link: "https://ecommerce-nextjs-git-main-jol0o.vercel.app/?vercelToolbarCode=I9N8k6Ujw5xLJFq",
-    },
-    {
-      name: "Ollies Pad",
-      img: "./project/ollie.png",
-      tool: ["WORDPRESS", "ELEMENTOR"],
-      link: "https://jolo.42web.io/",
-    },
-    {
-      name: "Play Otaku",
-      img: "./project/otaku.png",
-      tool: ["NEXT JS", "SUPABASE"],
-      link: "https://play-otaku-ruddy.vercel.app/",
-    },
-    {
-      name: "Gasbee",
-      img: "./project/gasbee.png",
-      tool: ["NEXT JS", "NODE/EXPRESS"],
-      link: "https://gasbee.aap-h.com/",
-    },
-    {
-      name: "Remimic",
-      img: "./project/remimic.png",
-      tool: ["MERN"],
-      link: "https://remimic.com/",
-    },
+      name: "Clip Factory",
+      img: "./project/clip-factory.png",
+      tool: ["NextJs", "Shadcn"],
+      link: "https://clip-factory-two.vercel.app/",
+    }
   ];
 
   return (
@@ -153,12 +171,12 @@ const Projects = () => {
           </TextCard>
         </div>
         <div className="max-w-[1400px] flex items-center justify-center mx-auto my-5">
-          <div className="w-full min-h-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-2 md:gap-10">
+          <div className="w-full min-h-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 items-center justify-center gap-2 md:gap-10">
             {info.map((item, index) => {
               return (
                 <Card key={index}>
                   <a href={item.link} target="_blank">
-                    <div className="w-[200px,100%,300px] active:bg-green-900 border border-green-800 rounded-lg p-3">
+                    <div className="w-[200px,100%,400px] active:bg-green-900 border border-green-800 rounded-lg p-3">
                       <img
                         src={item.img}
                         alt="image"

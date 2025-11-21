@@ -214,7 +214,7 @@ export default function Timeline() {
                 </svg>
               </div>
               <div>
-                <h1 className="font-semibold text-md text-white">NextJs</h1>
+                <h1 className="font-semibold text-md text-white">Next.js</h1>
                 <p className="text-sm text-gray-400">January 2023</p>
                 <p className="mt-2 text-gray-400 text-sm">
                   Next.js is a React framework for building server-side rendered
@@ -245,10 +245,10 @@ export default function Timeline() {
                 </h1>
                 <p className="text-sm text-gray-400">March-2023</p>
                 <p className="mt-2 text-gray-400 text-sm">
-                  Google Firebase is a non-SQL database I love using firebase
-                  because of its simplicity, flexibility and easy to implement
-                  in a project. And its authentication is so simple you can
-                  learn them in their docs.
+                  Google Firebase is a NoSQL platform. I like using Firebase
+                  because of its simplicity, flexibility, and easy
+                  integration. Its authentication features and docs make it
+                  straightforward to implement in projects.
                 </p>
               </div>
             </li>
@@ -272,10 +272,10 @@ export default function Timeline() {
                 </h1>
                 <p className="text-sm text-gray-400">March-2023</p>
                 <p className="mt-2 text-gray-400 text-sm">
-                  I learned basic PHP and MySQL because of our final project in
-                  school we are assign to make a blog app using PHP, JavaScript,
-                  MySQL and XAMP. I enjoyed using PHP because not unlike
-                  JavaScript the syntax is not that complicated to understand.
+                  I learned basic PHP and MySQL for a final school project —
+                  we built a blog app using PHP, JavaScript, MySQL, and XAMPP.
+                  I found PHP straightforward to learn and useful for server‑side
+                  features.
                 </p>
               </div>
             </li>
@@ -297,10 +297,9 @@ export default function Timeline() {
                 <h1 className="font-semibold text-md text-white">REST API</h1>
                 <p className="text-sm text-gray-400">July-2023</p>
                 <p className="mt-2 text-gray-400 text-sm">
-                  In Nextjs we are allowed to make our own api to access the
-                  database because nextjs runs in server-side. I learned to make
-                  a CRUD app using REST API now I am planning to learn MonggoDB
-                  for the database.
+                  In Next.js we can create server-side API routes to access
+                  databases. I built a CRUD app using REST APIs and am
+                  planning to learn MongoDB next.
                 </p>
               </div>
             </li>
@@ -342,7 +341,7 @@ export default function Timeline() {
                 </svg>
               </div>
               <div>
-                <h1 className="font-semibold text-md text-white">Nextjs TypeScript</h1>
+                <h1 className="font-semibold text-md text-white">Next.js + TypeScript</h1>
                 <p className="text-sm text-gray-400">January-2024</p>
                 <p className="mt-2 text-gray-400 text-sm">
                   I learned TypeScript because of Nextjs. TypeScript is a
@@ -392,13 +391,12 @@ export default function Timeline() {
                 </svg>
               </div>
               <div>
-                <h1 className="font-semibold text-md text-white">Progresive Web Application</h1>
+                <h1 className="font-semibold text-md text-white">Progressive Web Application</h1>
                 <p className="text-sm text-gray-400">April-2024</p>
                 <p className="mt-2 text-gray-400 text-sm">
-                  I learned how to create Progressive Web Applications (PWAs) to
-                  provide a better user experience on the web. PWAs are web
-                  applications that use modern web technologies to provide a
-                  native app-like experience to users.
+                  I learned how to create Progressive Web Applications (PWAs)
+                  to provide a better app-like experience on the web using
+                  modern browser APIs and service workers.
                 </p>
               </div>
             </li>
@@ -449,6 +447,110 @@ export default function Timeline() {
                   engine. Express.js is a web application framework for Node.js.
                   I learned how to use Node.js and Express.js to build
                   server-side applications and APIs.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">Next.js Monorepo & T3 Stack</h1>
+                <p className="text-sm text-gray-400">March-2025</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  Adopted a monorepo structure for Next.js projects and used
+                  the T3 Stack (Next.js, TypeScript, Tailwind, tRPC) with
+                  Supabase to streamline development, sharing code and
+                  improving DX across admin, API, and frontend apps.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">OpenAI, Twilio, ElevenLabs, Deepgram</h1>
+                <p className="text-sm text-gray-400">June-2025</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  Integrated AI and voice services — OpenAI for text and
+                  reasoning, Twilio for telephony/media streams, ElevenLabs
+                  and Deepgram for high-quality speech synthesis and
+                  transcription — to build real-time conversational and voice
+                  experiences.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">n8n Automation</h1>
+                <p className="text-sm text-gray-400">August-2025</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  Built automation workflows using n8n to connect services,
+                  automate repetitive tasks, and orchestrate data flows between
+                  APIs and internal systems.
+                </p>
+              </div>
+            </li>
+          </TimelineCard>
+
+          <TimelineCard>
+            <li className="relative flex items-baseline gap-6 pb-5">
+              <div className="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-green-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  className="bi bi-circle-fill fill-green-500"
+                  viewBox="0 0 16 16"
+                >
+                  <circle cx="8" cy="8" r="8" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="font-semibold text-md text-white">AWS Cloud (EC2, Lambda, DynamoDB, CloudFront, S3)</h1>
+                <p className="text-sm text-gray-400">November-2025</p>
+                <p className="mt-2 text-gray-400 text-sm">
+                  Deployed and operated services on AWS — EC2 for servers,
+                  Lambda for serverless compute, DynamoDB for NoSQL storage,
+                  CloudFront for CDN, and S3 for object storage — focusing on
+                  scalability, security, and performance.
                 </p>
               </div>
             </li>

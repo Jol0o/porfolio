@@ -101,9 +101,9 @@ const About = () => {
           <Card>
             <div className="w-full flex justify-center items-center before:bg-white before:absolute before:content-none">
               <img
-                src="/me1.png"
+                src="/me.jpg"
                 alt="me"
-                className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] w-[clamp(200px,100%,300px)] h-[clamp(200px,100%,300px)]"
+                className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] w-60 h-60 md:w-72 md:h-72 object-cover border-4 border-green-500"
               />
             </div>
           </Card>
@@ -112,18 +112,21 @@ const About = () => {
             <LowCard>
               <div className="flex flex-col gap-3">
                 <p className="w-auto  tracking-wide md:text-sm leading-10 ">
-                  👋 Hi, I'm John Loyd, a self-taught web developer from
-                  Philippines.
+                  👋 Hi — I'm John Loyd, a self-taught web developer based in the
+                  Philippines. I build fast, accessible, and responsive web
+                  experiences.
                 </p>
                 <p>
-                  🚀 I'm skilled in HTML, CSS, BOOTSTAP, TAILWIND, REACT.JS,
-                  NEXT.JS, FIREBASE, TYPESCRIPT, NODEJS and I'm always eager to learn more. Besides
-                  coding, I enjoy video games and developing usefull website.
+                  🚀 I work with HTML, CSS (Tailwind, Bootstrap), JavaScript/
+                  TypeScript, React, Next.js, Firebase, and Node.js. I'm
+                  continually learning new tools and best practices to deliver
+                  polished user experiences. Outside of coding, I enjoy video
+                  games and building useful web projects.
                 </p>
                 <p>
-                  💡 I value collaboration and teamwork and am open to working
-                  together and I enjoy problem solving. If you have any questions or would like to work with
-                  me, please reach out.
+                  💡 I enjoy collaborating on meaningful projects and solving
+                  problems. If you'd like to work together or have any
+                  questions, please get in touch — I'd love to hear from you.
                 </p>
               </div>
             </LowCard>
@@ -137,7 +140,7 @@ const About = () => {
                   </span>
                 </div>
                 <a
-                  href="https://drive.google.com/file/d/1R1EOmb07nkAWxLNnJDoU68pf5yRDwyet/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/17hyiQyjIaN9cRcJy6zSC-qR9jhNU0EBC/view?usp=sharing"
                   download="Resume-John-Loyd-Belen.pdf"
                   target="_blank"
                 >

@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React from "react";
 import { motion } from "framer-motion";
 
 const TextVariants = {
@@ -65,26 +64,7 @@ function TextCard({ children }) {
 }
 
 export default function Contact() {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_1gtuhsb",
-        "template_8mktrll",
-        form.current,
-        "u3Q7kadtI95s4wh7P"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+  // Contact form removed intentionally to avoid abuse. Contact info shown below.
 
   return (
     <div
@@ -110,50 +90,46 @@ export default function Contact() {
           </div>
         </TextCard>
         <FormCard>
-          <form
-            ref={form}
-            id="contact-form"
-            onSubmit={sendEmail}
-            className="md:h-full min-h-fit flex flex-col justify-center min-w-full"
-          >
-            <label htmlFor="user_name" className="font-semibold text-xs mb-2">
-              Your Name
-            </label>
-            <input
-              type="text"
-              id="user_name"
-              name="user_name"
-              className="py-2 px-5 text-white caret-green-500 font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
-              placeholder="Enter your name"
-              required
-            />
-            <label htmlFor="user_email" className="font-semibold text-xs mb-2">
-              Your Email
-            </label>
-            <input
-              type="email"
-              id="user_email"
-              name="user_email"
-              placeholder="Enter your email"
-              className="py-2 px-5 text-white font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
-              required
-            />
+          <div className="md:h-full md:w-full flex flex-col w-full justify-center">
+            <h2 className="text-2xl font-semibold text-white mb-1">John Loyd Belen</h2>
+            <p className="text-sm text-gray-400 mb-4">Full Stack Developer</p>
 
-            <label htmlFor="message" className="font-semibold text-xs mb-2">
-              Tell me a bit more what you are looking for?
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message"
-              className="min-h-[200px] py-2 px-5 text-white font-medium outline-none outline-offset-1 rounded-sm bg-[#1C1C22] mb-3"
-              required
-            />
+            <div className="flex flex-col gap-3">
+              <a
+                href="mailto:jloyd9836@gmail.com"
+                className="text-green-500 font-medium"
+              >
+                jloyd9836@gmail.com
+              </a>
 
-            <button className="self-start h-10 w-28 bg-green-500 rounded-full shadow-md mt-3 shadow-green-500 font-bold text-lg">
-              Send
-            </button>
-          </form>
+              <a href="tel:+639991502898" className="text-green-500 font-medium">
+                +63 999 150 2898
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/john-loyd-belen"
+                target="_blank"
+                rel="noreferrer"
+                className="text-green-500"
+              >
+                LinkedIn
+              </a>
+
+              <a
+                href="https://github.com/jloyd9836"
+                target="_blank"
+                rel="noreferrer"
+                className="text-green-500"
+              >
+                GitHub
+              </a>
+            </div>
+
+            <p className="mt-6 text-sm text-gray-400">
+              Prefer email or LinkedIn for inquiries. Thank you — I look
+              forward to connecting.
+            </p>
+          </div>
         </FormCard>
       </div>
     </div>
