@@ -165,7 +165,7 @@ const Hero = () => {
         {/* <Globe className="w-[1000px] z-0" /> */}
       </motion.div>
 
-      <div className="z-1 animate-bounce absolute left-[50%] translate-x-[-50%] translate-y-[-50%] top-[90%] rounded-full hover:bg-green-400 transition bg-[#3F8E00] py-3 px-3">
+      <div className="z-1 animate-bounce absolute left-[50%] translate-x-[-50%] translate-y-[-50%] top-[90%] rounded-full hover:bg-violet-400 transition bg-violet-500 py-3 px-3">
         <button onClick={scrollToContent}>
           <BsArrowDown />
         </button>
