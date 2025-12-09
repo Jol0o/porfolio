@@ -1,9 +1,10 @@
+import React, { Suspense } from 'react';
 import { motion } from "framer-motion";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowDown, BsLinkedin } from "react-icons/bs";
-import Spline from '@splinetool/react-spline';
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
 import Globe from './../components/magicui/globe';
 
 const cardVariants = {
@@ -74,7 +75,9 @@ const Hero = () => {
     <div id="home" className="h-screen w-full pt-3 text-white font-mono relative inset-0">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
-        <Spline scene="https://prod.spline.design/0Lmua0ew9jjhiMNX/scene.splinecode" />
+        <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-white/20">Loading 3D Scene...</div>}>
+          <Spline scene="https://prod.spline.design/0Lmua0ew9jjhiMNX/scene.splinecode" />
+        </Suspense>
       </div>
 
       <ul className="hidden lg:flex flex-col top-[45%] transition fixed left-[0] gap-1 uppercase font-semibold text-2xl z-10 text-[#9C9C9C]">
