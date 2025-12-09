@@ -94,8 +94,8 @@ const About = () => {
       className="snap-start text-white w-full min-h-[100vh] my-5 flex justify-center items-center flex-col font-mono mb-[3%] relative"
       id="about"
     >
-      <div className="w-[100px] md:w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[10%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px]"></div>
-      <div className="w-[100px] md:w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[90%] left-[0] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px]"></div>
+      <div className="w-[100px] md:w-[500px] h-[450px] bg-violet-900 rounded-full absolute z-0 top-[10%] left-[100%] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px]"></div>
+      <div className="w-[100px] md:w-[500px] h-[450px] bg-violet-900 rounded-full absolute z-0 top-[90%] left-[0] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px]"></div>
       <div className="max-w-[1200px] mx-auto z-10">
         <div className="flex flex-col md:flex-row justify-evenly items-center w-fit  mx-auto  rounded-xl">
           <Card>
@@ -103,7 +103,7 @@ const About = () => {
               <img
                 src="/me.jpg"
                 alt="me"
-                className="rounded-full shadow-green-800 shadow-lg bg-[#13a0491a] w-60 h-60 md:w-72 md:h-72 object-cover border-4 border-green-500"
+                className="rounded-full shadow-violet-900 shadow-lg bg-[#090E16] w-60 h-60 md:w-72 md:h-72 object-cover border-4 border-violet-500"
               />
             </div>
           </Card>
@@ -132,11 +132,11 @@ const About = () => {
             </LowCard>
 
             <ButtonCard>
-              <button className="border border-green-500 text-green-500 bg-transparent h-10 w-36 relative rounded-md mt-5">
+              <button className="border border-violet-500 text-violet-500 bg-transparent h-10 w-36 relative rounded-md mt-5">
                 <div className="absolute bottom-8 left-[135px]">
                   <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-500 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-violet-500"></span>
                   </span>
                 </div>
                 <a

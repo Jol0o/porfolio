@@ -7,20 +7,29 @@ import Contact from "./component/Contact";
 import Skills from "./component/Skills";
 import Footer from "./component/Footer";
 import Timeline from "./component/Timeline";
+import SplashScreen from "./component/SplashScreen";
 import { AnimatePresence } from "framer-motion";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <AnimatePresence>
-      <div className="bg-[#090E16] w-full overflow-hidden ">
-        <Nav />
-        <Hero />
-        <Projects />
-        <About />
-        <Skills />
-        <Timeline />
-        <Contact />
-        <Footer />
+      <div className="w-full overflow-hidden ">
+        {isLoading ? (
+          <SplashScreen finishLoading={() => setIsLoading(false)} />
+        ) : (
+          <>
+            <Nav />
+            <Hero />
+            <Projects />
+            <About />
+            <Skills />
+            <Timeline />
+            <Contact />
+            <Footer />
+          </>
+        )}
       </div>
     </AnimatePresence>
   );

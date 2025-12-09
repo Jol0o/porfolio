@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className="fixed top-0 z-50 w-full">
-      <div className="backdrop-blur-md bg-black/70 border-b border-white/10">
+      <div className="backdrop-blur-md bg-[#090E16]/70 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -48,7 +48,7 @@ export default function Navbar() {
               transition={{ delay: 0.2 }}
               className="flex-shrink-0"
             >
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
                 JOLO.
               </h1>
             </motion.div>
@@ -63,14 +63,14 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * index }}
-                    className={`relative px-3 py-2 text-sm font-medium transition-colors ${activeSection === item.href.slice(1) ? "text-green-400" : "text-gray-300 hover:text-white"
+                    className={`relative px-3 py-2 text-sm font-medium transition-colors ${activeSection === item.href.slice(1) ? "text-violet-400" : "text-gray-300 hover:text-white"
                       }`}
                   >
                     {item.label}
                     {activeSection === item.href.slice(1) && (
                       <motion.div
                         layoutId="activeSection"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-400"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-violet-400"
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -108,8 +108,8 @@ export default function Navbar() {
                     transition={{ delay: 0.1 * index }}
                     onClick={() => setIsOpen(false)}
                     className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${activeSection === item.href.slice(1)
-                        ? "text-green-400 bg-black/20"
-                        : "text-gray-300 hover:text-white hover:bg-black/20"
+                      ? "text-violet-400 bg-black/20"
+                      : "text-gray-300 hover:text-white hover:bg-black/20"
                       }`}
                   >
                     {item.label}

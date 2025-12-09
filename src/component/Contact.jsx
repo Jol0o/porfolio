@@ -71,11 +71,11 @@ export default function Contact() {
       id="contact"
       className="w-full min-h-screen flex justify-center items-center relative"
     >
-      <div className="w-[200px]  md:w-[500px] h-[450px] bg-green-700 rounded-full absolute z-0 top-[45%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px] z-1"></div>
+      <div className="w-[200px]  md:w-[500px] h-[450px] bg-violet-900 rounded-full absolute z-0 top-[45%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[200px] md:blur-[400px] z-1"></div>
       <div className="flex md:flex-row flex-col gap-5 items-center  min-h-[70vh] w-[90%] md:w-[90%] lg:w-[70%] text-gray-200 rounded-xl p-0 sm:p-10 relative z-10">
         <TextCard>
           <div className="md:h-full md:w-full flex flex-col w-full ">
-            <h1 className="text-3xl md:text-5xl font-bold text-green-500 mb-2">
+            <h1 className="text-3xl md:text-5xl font-bold text-violet-500 mb-2">
               Get in touch
             </h1>
             <p className="md:w-3/4  font-normal text-sm leading-7 tracking-wide text-justify">
@@ -97,12 +97,12 @@ export default function Contact() {
             <div className="flex flex-col gap-3">
               <a
                 href="mailto:jloyd9836@gmail.com"
-                className="text-green-500 font-medium"
+                className="text-violet-500 font-medium"
               >
                 jloyd9836@gmail.com
               </a>
 
-              <a href="tel:+639991502898" className="text-green-500 font-medium">
+              <a href="tel:+639991502898" className="text-violet-500 font-medium">
                 +63 999 150 2898
               </a>
 
@@ -110,7 +110,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/john-loyd-belen"
                 target="_blank"
                 rel="noreferrer"
-                className="text-green-500"
+                className="text-violet-500"
               >
                 LinkedIn
               </a>
@@ -119,7 +119,7 @@ export default function Contact() {
                 href="https://github.com/jloyd9836"
                 target="_blank"
                 rel="noreferrer"
-                className="text-green-500"
+                className="text-violet-500"
               >
                 GitHub
               </a>

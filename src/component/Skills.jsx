@@ -79,7 +79,7 @@ export default function Skills() {
     <div className="w-full min-h-[50vh] flex flex-col items-center justify-center mt-20">
       <Card>
         <div className="flex items-center justify-center">
-          <div className="text-green-400 self-center font-bold bg-green-900 w-fit rounded-lg px-2">
+          <div className="text-violet-400 self-center font-bold bg-violet-900 w-fit rounded-lg px-2">
             🧑‍💻 Skill & Experience
           </div>
         </div>
