@@ -29,7 +29,32 @@ test.describe("Portfolio", () => {
     }
   });
 
-  test("shows all project cards linking to the right URLs", async ({ page }) => {
+  test("shows all 5 project cards", async ({ page }) => {
+    const cards = page.locator("#project button[aria-haspopup='dialog']");
+    await expect(cards).toHaveCount(5);
+  });
+
+  test("project card opens modal with correct details", async ({ page }) => {
+    const firstCard = page.locator("#project button[aria-haspopup='dialog']").first();
+    await firstCard.click();
+
+    const modal = page.locator('[role="dialog"]');
+    await expect(modal).toBeVisible();
+
+    // Modal contains project name
+    await expect(modal.locator("#modal-title")).toBeAttached();
+    // Modal has a live link
+    await expect(modal.locator('a:has-text("View Live")')).toBeAttached();
+  });
+
+  test("Escape key closes the project modal", async ({ page }) => {
+    await page.locator("#project button[aria-haspopup='dialog']").first().click();
+    await expect(page.locator('[role="dialog"]')).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(page.locator('[role="dialog"]')).not.toBeVisible();
+  });
+
+  test("modal live link goes to the correct external URL for each project", async ({ page }) => {
     const expectedLinks = [
       "https://callexa-page-nw6i.vercel.app/",
       "https://servebeez.com/",
@@ -37,10 +62,17 @@ test.describe("Portfolio", () => {
       "https://wizyemm.com",
       "https://www.suprah-app.com",
     ];
-    for (const link of expectedLinks) {
-      await expect(
-        page.locator(`#project a[href="${link}"]`)
-      ).toBeAttached();
+    const cards = page.locator("#project button[aria-haspopup='dialog']");
+    for (let i = 0; i < expectedLinks.length; i++) {
+      await cards.nth(i).click();
+      const modal = page.locator('[role="dialog"]');
+      await expect(modal).toBeVisible();
+      await expect(modal.locator('a:has-text("View Live")')).toHaveAttribute(
+        "href",
+        expectedLinks[i]
+      );
+      await page.keyboard.press("Escape");
+      await expect(modal).not.toBeVisible();
     }
   });
 
@@ -73,10 +105,17 @@ test.describe("Portfolio", () => {
   });
 
   test("contact section exposes email and phone", async ({ page }) => {
-    await expect(
-      page.locator('#contact a[href^="mailto:"]')
-    ).toBeAttached();
+    await expect(page.locator('#contact a[href^="mailto:"]')).toBeAttached();
     await expect(page.locator('#contact a[href^="tel:"]')).toBeAttached();
+  });
+
+  test("mobile: hamburger button is present and has ARIA attributes", async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 812 });
+    const btn = page.locator('button[aria-controls="mobile-menu"]');
+    await expect(btn).toBeAttached();
+    await expect(btn).toHaveAttribute("aria-expanded", "false");
+    await btn.click();
+    await expect(btn).toHaveAttribute("aria-expanded", "true");
   });
 });
 
