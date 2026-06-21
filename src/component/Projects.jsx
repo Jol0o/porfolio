@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
+import React from "react";
+import { projects } from "../data/portfolio";
 
 const cardVariants = {
   offscreen: {
@@ -59,27 +60,15 @@ function Card({ children }) {
   );
 }
 
+// Neutral inline placeholder shown if a project image is missing.
+const IMG_FALLBACK =
+  "data:image/svg+xml;utf8," +
+  encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' width='400' height='220'><rect width='100%' height='100%' fill='#1e1033'/><text x='50%' y='50%' fill='#a78bfa' font-family='sans-serif' font-size='16' text-anchor='middle' dominant-baseline='middle'>Preview coming soon</text></svg>`
+  );
+
 const Projects = () => {
-  const info = [
-    {
-      name: "Callexa: Voice Automation Ai",
-      img: "./project/callexa.png",
-      tool: ["NextJs", "Express", "Twilio"],
-      link: "https://callexa-page-nw6i.vercel.app/",
-    },
-    {
-      name: "ServeBeez",
-      img: "./project/servebeez.png",
-      tool: ["Monorepo", "Supabase", "T3 Stack"],
-      link: "https://servebeez.com/",
-    },
-    {
-      name: "Clip Factory",
-      img: "./project/clip-factory.png",
-      tool: ["NextJs", "Shadcn"],
-      link: "https://clip-factory-two.vercel.app/",
-    }
-  ];
+  const info = projects;
 
   return (
     <div
@@ -103,11 +92,18 @@ const Projects = () => {
             {info.map((item, index) => {
               return (
                 <Card key={index}>
-                  <a href={item.link} target="_blank">
+                  <a href={item.link} target="_blank" rel="noreferrer">
                     <div className="w-[200px,100%,400px] active:bg-violet-900 border border-violet-800 rounded-lg p-3">
                       <img
                         src={item.img}
-                        alt="image"
+                        alt={item.alt || item.name}
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => {
+                          if (e.currentTarget.src !== IMG_FALLBACK) {
+                            e.currentTarget.src = IMG_FALLBACK;
+                          }
+                        }}
                         className="w-full min-h-[100px] object-cover rounded-xl hover:scale-[1.02] transition"
                       />
 

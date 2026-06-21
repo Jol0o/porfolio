@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { profile } from "../data/portfolio";
 
 const imgVariants = {
   offscreen: {
@@ -102,7 +103,9 @@ const About = () => {
             <div className="w-full flex justify-center items-center before:bg-white before:absolute before:content-none">
               <img
                 src="/me.jpg"
-                alt="me"
+                alt="Portrait of John Loyd Belen"
+                loading="lazy"
+                decoding="async"
                 className="rounded-full shadow-violet-900 shadow-lg bg-[#090E16] w-60 h-60 md:w-72 md:h-72 object-cover border-4 border-violet-500"
               />
             </div>
@@ -140,9 +143,10 @@ const About = () => {
                   </span>
                 </div>
                 <a
-                  href="https://drive.google.com/file/d/17hyiQyjIaN9cRcJy6zSC-qR9jhNU0EBC/view?usp=sharing"
+                  href={profile.resumeUrl}
                   download="Resume-John-Loyd-Belen.pdf"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Download CV
                 </a>

@@ -5,7 +5,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowDown, BsLinkedin } from "react-icons/bs";
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
-import Globe from './../components/magicui/globe';
+import { social } from "../data/portfolio";
 
 const cardVariants = {
   offscreen: {
@@ -83,8 +83,9 @@ const Hero = () => {
       <ul className="hidden lg:flex flex-col top-[45%] transition fixed left-[0] gap-1 uppercase font-semibold text-2xl z-10 text-[#9C9C9C]">
         <li className="ml-[-109px] hover:ml-[5px]  ease-out duration-300 hover:text-cyan-500 ">
           <a
-            href="https://www.facebook.com/jol0oo"
+            href={social.facebook}
             target="_blank"
+            rel="noreferrer"
             aria-label="Facebook Profile"
             className="flex gap-2 items-center "
           >
@@ -94,8 +95,9 @@ const Hero = () => {
         </li>
         <li className="ml-[-121px] hover:ml-[5px] ease-out duration-300 hover:text-[#A8274D] ">
           <a
-            href="https://www.instagram.com/j0lo_o/"
+            href={social.instagram}
             target="_blank"
+            rel="noreferrer"
             aria-label="Instagram Profile"
             className="flex gap-2 items-center "
           >
@@ -105,8 +107,9 @@ const Hero = () => {
         </li>
         <li className="ml-[-80px] hover:ml-[10px]  ease-out duration-300 hover:text-white ">
           <a
-            href="https://github.com/Jol0o"
+            href={social.github}
             target="_blank"
+            rel="noreferrer"
             aria-label="GitHub Profile"
             className="flex gap-2 items-center "
           >
@@ -116,8 +119,9 @@ const Hero = () => {
         </li>
         <li className="ml-[-109px] hover:ml-[10px]  ease-out duration-300 hover:text-white ">
           <a
-            href="https://www.linkedin.com/in/john-loyd-belen-180329250/"
+            href={social.linkedin}
             target="_blank"
+            rel="noreferrer"
             aria-label="LinkedIn Profile"
             className="flex gap-2 items-center "
           >
@@ -165,7 +169,6 @@ const Hero = () => {
             </button>
           </motion.div>
         </div> */}
-        {/* <Globe className="w-[1000px] z-0" /> */}
       </motion.div>
 
       <div className="z-1 animate-bounce absolute left-[50%] translate-x-[-50%] translate-y-[-50%] top-[90%] rounded-full hover:bg-violet-400 transition bg-violet-500 py-3 px-3">
