@@ -64,7 +64,7 @@ export const projects = [
   },
   {
     name: "WizyEMM",
-    img: "./project/wizyemm.png",
+    img: "./project/wizy.png",
     // Tech tags are best-guess placeholders — edit this line as needed.
     tool: ["Next.js", "Android Enterprise", "EMM"],
     link: "https://wizyemm.com",
@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     name: "Suprah",
-    img: "./project/suprah.png",
+    img: "./project/supra.png",
     // Tech tags are best-guess placeholders — edit this line as needed.
     tool: ["Next.js", "SaaS"],
     link: "https://www.suprah-app.com",
