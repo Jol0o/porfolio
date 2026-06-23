@@ -1,16 +1,15 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { appConfig } from "../data/portfolio";
 
 const SplashScreen = ({ finishLoading }) => {
     const [count, setCount] = useState(0);
-    const [textIndex, setTextIndex] = useState(0);
+    const [status, setStatus] = useState("Initializing...");
 
-    // Status text logic
     const statusMessages = ["Initializing...", "Loading Modules...", "Preparing Assets...", "Welcome."];
-    const [status, setStatus] = useState(statusMessages[0]);
 
     useEffect(() => {
-        const duration = 2500; // Increased to 2.5s for better pacing
+        const duration = 2500;
         const steps = 100;
         const intervalTime = duration / steps;
 
@@ -18,12 +17,9 @@ const SplashScreen = ({ finishLoading }) => {
             setCount((prev) => {
                 if (prev < 100) {
                     const newCount = prev + 1;
-
-                    // Update status based on percentage
                     if (newCount > 30 && newCount < 70) setStatus(statusMessages[1]);
                     if (newCount >= 70 && newCount < 100) setStatus(statusMessages[2]);
                     if (newCount === 100) setStatus(statusMessages[3]);
-
                     return newCount;
                 }
                 clearInterval(interval);
@@ -41,18 +37,14 @@ const SplashScreen = ({ finishLoading }) => {
         };
     }, [finishLoading]);
 
-    // Staggered letters
-    const letters = "JOLO.".split("");
+    const letters = appConfig.logo.split("");
 
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
-        }
+            transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+        },
     };
 
     const letterVariants = {
@@ -60,22 +52,15 @@ const SplashScreen = ({ finishLoading }) => {
         visible: {
             y: 0,
             opacity: 1,
-            transition: {
-                type: "spring",
-                damping: 12,
-                stiffness: 100
-            }
-        }
+            transition: { type: "spring", damping: 12, stiffness: 100 },
+        },
     };
 
     return (
         <motion.div
             className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#090E16] overflow-hidden"
             initial={{ y: 0 }}
-            exit={{
-                y: "-100%",
-                transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
-            }}
+            exit={{ y: "-100%", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
         >
             {/* Animated Background Grid */}
             <div className="absolute inset-0 z-0">
@@ -85,17 +70,11 @@ const SplashScreen = ({ finishLoading }) => {
                     </pattern>
                     <rect width="100%" height="100%" fill="url(#grid)" />
                 </svg>
-                <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-[#090E16] to-transparent"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#090E16] to-transparent" />
             </div>
 
             {/* Main Content */}
             <div className="z-10 flex flex-col items-center">
-
-                {/* Staggered Text Reveal */}
                 <div className="overflow-hidden mb-8">
                     <motion.div
                         className="flex"
@@ -115,11 +94,10 @@ const SplashScreen = ({ finishLoading }) => {
                     </motion.div>
                 </div>
 
-                {/* Dynamic Status Text & Counter */}
                 <div className="w-[300px] flex flex-col gap-2">
                     <div className="flex justify-between items-end mb-1">
                         <motion.span
-                            key={status} // Key changing triggers animation
+                            key={status}
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             className="text-white/60 text-sm font-mono uppercase tracking-widest"
@@ -128,8 +106,6 @@ const SplashScreen = ({ finishLoading }) => {
                         </motion.span>
                         <span className="text-white text-xl font-bold font-mono">{count}%</span>
                     </div>
-
-                    {/* Progress Bar */}
                     <div className="w-full h-[2px] bg-white/10 rounded-full overflow-hidden">
                         <motion.div
                             className="h-full bg-gradient-to-r from-violet-500 to-purple-400"
@@ -139,7 +115,6 @@ const SplashScreen = ({ finishLoading }) => {
                     </div>
                 </div>
             </div>
-
         </motion.div>
     );
 };
