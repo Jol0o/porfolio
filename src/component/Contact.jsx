@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { profile, social } from "../data/portfolio";
 
 const TextVariants = {
   offscreen: {
@@ -91,23 +92,26 @@ export default function Contact() {
         </TextCard>
         <FormCard>
           <div className="md:h-full md:w-full flex flex-col w-full justify-center">
-            <h2 className="text-2xl font-semibold text-white mb-1">John Loyd Belen</h2>
-            <p className="text-sm text-gray-400 mb-4">Full Stack Developer</p>
+            <h2 className="text-2xl font-semibold text-white mb-1">{profile.name}</h2>
+            <p className="text-sm text-gray-400 mb-4">{profile.title}</p>
 
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:jloyd9836@gmail.com"
+                href={`mailto:${profile.email}`}
                 className="text-violet-500 font-medium"
               >
-                jloyd9836@gmail.com
-              </a>
-
-              <a href="tel:+639991502898" className="text-violet-500 font-medium">
-                +63 999 150 2898
+                {profile.email}
               </a>
 
               <a
-                href="https://www.linkedin.com/in/john-loyd-belen"
+                href={`tel:${profile.phoneHref}`}
+                className="text-violet-500 font-medium"
+              >
+                {profile.phone}
+              </a>
+
+              <a
+                href={social.linkedin}
                 target="_blank"
                 rel="noreferrer"
                 className="text-violet-500"
@@ -116,7 +120,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://github.com/jloyd9836"
+                href={social.github}
                 target="_blank"
                 rel="noreferrer"
                 className="text-violet-500"

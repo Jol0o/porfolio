@@ -1,47 +1,42 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect, useRef } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { appConfig } from "../data/portfolio";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const debounceRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "project", "about", "timeline", "contact"]
-      const currentSection = sections.find((section) => {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          return rect.top <= 100 && rect.bottom >= 100
-        }
-        return false
-      })
-      if (currentSection) {
-        setActiveSection(currentSection)
-      }
-    }
+      clearTimeout(debounceRef.current);
+      debounceRef.current = setTimeout(() => {
+        const sections = appConfig.navigation.map(({ href }) => href.slice(1));
+        const current = sections.find((section) => {
+          const el = document.getElementById(section);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            return rect.top <= 100 && rect.bottom >= 100;
+          }
+          return false;
+        });
+        if (current) setActiveSection(current);
+      }, 100);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const menuItems = [
-    { href: "#home", label: "Home" },
-    { href: "#project", label: "Projects" },
-    { href: "#about", label: "About Me" },
-    { href: "#timeline", label: "Timeline" },
-    { href: "#contact", label: "Contact" },
-  ]
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(debounceRef.current);
+    };
+  }, []);
 
   return (
     <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} className="fixed top-0 z-50 w-full">
       <div className="backdrop-blur-md bg-[#090E16]/70 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -49,22 +44,25 @@ export default function Navbar() {
               className="flex-shrink-0"
             >
               <h1 className="text-2xl font-bold bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
-                JOLO.
+                {appConfig.logo}
               </h1>
             </motion.div>
 
             {/* Desktop Menu */}
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                {menuItems.map((item, index) => (
+                {appConfig.navigation.map((item, index) => (
                   <motion.a
                     key={item.href}
                     href={item.href}
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * index }}
-                    className={`relative px-3 py-2 text-sm font-medium transition-colors ${activeSection === item.href.slice(1) ? "text-violet-400" : "text-gray-300 hover:text-white"
-                      }`}
+                    className={`relative px-3 py-2 text-sm font-medium transition-colors ${
+                      activeSection === item.href.slice(1)
+                        ? "text-violet-400"
+                        : "text-gray-300 hover:text-white"
+                    }`}
                   >
                     {item.label}
                     {activeSection === item.href.slice(1) && (
@@ -81,7 +79,13 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="md:hidden">
-              <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-white p-2">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-300 hover:text-white p-2"
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+              >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </motion.div>
@@ -92,6 +96,7 @@ export default function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -99,7 +104,7 @@ export default function Navbar() {
               className="md:hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1">
-                {menuItems.map((item, index) => (
+                {appConfig.navigation.map((item, index) => (
                   <motion.a
                     key={item.href}
                     href={item.href}
@@ -107,10 +112,11 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 * index }}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${activeSection === item.href.slice(1)
-                      ? "text-violet-400 bg-black/20"
-                      : "text-gray-300 hover:text-white hover:bg-black/20"
-                      }`}
+                    className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
+                      activeSection === item.href.slice(1)
+                        ? "text-violet-400 bg-black/20"
+                        : "text-gray-300 hover:text-white hover:bg-black/20"
+                    }`}
                   >
                     {item.label}
                   </motion.a>
@@ -121,6 +127,5 @@ export default function Navbar() {
         </AnimatePresence>
       </div>
     </motion.nav>
-  )
+  );
 }
-

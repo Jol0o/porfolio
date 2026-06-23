@@ -1,40 +1,20 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import React from "react";
 import { AnimatedIcons } from './AnimatedIcons';
 
 const cardVariants = {
-  offscreen: {
-    opacity: 0,
-    scale: 0.5,
-    y: -100,
-  },
+  offscreen: { opacity: 0, scale: 0.5, y: -100 },
   onscreen: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      delay: 0.5,
-      duration: 0.9,
-      ease: [0, 0.71, 0.2, 1.01],
-    },
+    opacity: 1, y: 0, scale: 1,
+    transition: { delay: 0.5, duration: 0.9, ease: [0, 0.71, 0.2, 1.01] },
   },
 };
 
 const lowcardVariants = {
-  offscreen: {
-    opacity: 0,
-    scale: 0.5,
-    y: 100,
-  },
+  offscreen: { opacity: 0, scale: 0.5, y: 100 },
   onscreen: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      delay: 0.5,
-      duration: 0.9,
-      ease: [0, 0.71, 0.2, 1.01],
-    },
+    opacity: 1, y: 0, scale: 1,
+    transition: { delay: 0.5, duration: 0.9, ease: [0, 0.71, 0.2, 1.01] },
   },
 };
 
@@ -65,16 +45,6 @@ function LowCard({ children }) {
 }
 
 export default function Skills() {
-  const skills = [
-    "/Skill/Github.png",
-    "/Skill/Group 1.png",
-    "/Skill/HTML5.png",
-    "/Skill/Javascript.png",
-    "/Skill/Nextjs.png",
-    "/Skill/Shape.png",
-    "/Skill/TailwindCSS.png",
-    "/Skill/Vector.png",
-  ];
   return (
     <div className="w-full min-h-[50vh] flex flex-col items-center justify-center mt-20">
       <Card>
